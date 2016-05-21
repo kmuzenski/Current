@@ -15,8 +15,9 @@
     $_SESSION['uid'] = $userCreate->create($username,$email,$password,$location); 
    
 
-	 header('Location: index.php');
+	 header('Location: avatar.php');
     }
+
   
 
 ?>
@@ -96,7 +97,7 @@
 
       <div class="form-actions">
       <button type="submit" class="btn btn-success">Create</button>
-      <a class="btn" href="index.html">Back</a>
+      
        </div>
        </form>
 

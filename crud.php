@@ -76,8 +76,32 @@ public $user_id;
 	}
 
 }
+
+
+
+
+
 // END USER CRUD
 
+
+class aviCrud {	
+
+	public function create($type, $avi, $size, $user_FK){
+		if (!valid($type) || !valid($avi) || !valid($size) || !valid($user_FK)) {
+			return false;
+		} else {
+
+			$pdo = Database::connect();
+			$sql = "INSERT INTO avatar (type,avi,size,user_FK values(?, ?, ?, ?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($type,$avi,$size,$user_FK));
+
+
+			Database::disconnect();
+		
+		}
+	}
+}
 
 //CATEGORY CRUD
 class CategoryCrud {	
