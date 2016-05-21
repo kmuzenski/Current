@@ -22,14 +22,19 @@ try{
       $q = $pdo->prepare($sql);
       $q->execute(array(':id' => $_GET['id']));
 
-
       $data = $q->fetch();
-      print_r($data);
+     // print_r($data);
+
+  echo '<table class="table table-striped table-bordered">';
+  echo '<p>Date Posted:<br>'.$data['postDate'].'</p><br>';
+  echo '<p>Blog Title:<br>'.$data['blogTitle'].'</a></p><br>';
+  echo '<p>Blog Post:<br>'.$data['blogPost'].'</p><br><br><br>';
+  echo '</table>';
+
+
       Database::disconnect();
      // return $data;
       } catch (PDOException $error){
-
-     // header( "Location: 500.php" );
       echo $error->getMessage();
     }
 ?>
