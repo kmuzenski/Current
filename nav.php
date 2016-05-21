@@ -26,6 +26,11 @@
             echo '</a>';
             echo '</li>';
             echo '<li>';
+            echo '<a href="Profile.php">';
+            echo "Profile";
+            echo '</a>';
+            echo '</li>';
+            echo '<li>';
             echo '<a href="logout.php">';
             echo "Logout";
             echo '</a>';
