@@ -164,15 +164,15 @@ class CategoryCrud {
 class blogCrud {	
 
 
-	public function create($user_FK, $blogTitle, $blogPost){
-		if (!valid($user_FK) || !valid($blogTitle) || !valid($blogPost)) {
+	public function create($blogTitle, $blogPost, $user_FK){
+		if ( !valid($blogTitle) || !valid($blogPost || !valid($user_FK)) {
 			return false;
 		} else {
 
 			$pdo = Database::connect();
-			$sql = "INSERT INTO blog (user_FK,blogTitle,blogPost) values(?, ?, ?)";
+			$sql = "INSERT INTO blog (blogTitle,blogPost,user_FK) values(?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($user_FK,$blogTitle,$blogPost));
+			$q->execute(array($blogTitle,$blogPost,$user_FK));
 
 
 			Database::disconnect();
@@ -180,10 +180,10 @@ class blogCrud {
 		}
 	}
 
-/*	public function read(){
+	public function read(){
 		try{
 			$pdo = Database::connect();
-			$sql = 'SELECT * FROM recipe WHERE id = ?';
+			$sql = 'SELECT * FROM blog WHERE user_FK = ?';
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->user_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
@@ -197,7 +197,7 @@ class blogCrud {
 
     }
 
-	public function update($username,$email,$password){
+/*	public function update($username,$email,$password){
 		if (!valid($username) || !valid($email) || !valid($password)) {
 			return false;
 		} else {
