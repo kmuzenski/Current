@@ -162,6 +162,12 @@ class CategoryCrud {
 
 
 class blogCrud {	
+	public $user_id;
+
+
+        public function __construct($user_id){
+                $this->user_id = $user_id;
+        }
 
 
 	public function create($blogTitle, $blogPost, $user_FK){
@@ -183,7 +189,7 @@ class blogCrud {
 	public function read(){
 		try{
 			$pdo = Database::connect();
-			$sql = 'SELECT * FROM blog WHERE user_FK = ?';
+			$sql = 'SELECT * FROM blog';
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->user_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
