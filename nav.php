@@ -26,7 +26,7 @@
             echo '</a>';
             echo '</li>';
             echo '<li>';
-            echo '<a href="Profile.php">';
+            echo '<a href="profile.php">';
             echo "Profile";
             echo '</a>';
             echo '</li>';
