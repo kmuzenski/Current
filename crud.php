@@ -189,7 +189,7 @@ class blogCrud {
 	public function read(){
 		try{
 			$pdo = Database::connect();
-			$sql = 'SELECT timestamp FROM blog ORDER BY timestamp ASC';
+			$sql = 'SELECT * FROM blog ORDER BY timestamp ASC';
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->user_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
