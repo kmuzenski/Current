@@ -163,7 +163,8 @@ class CategoryCrud {
 
 class blogCrud {	
 
-		$user_FK = $_SESSION['uid'];
+	//$user_FK = $_SESSION['uid'];
+	
 	public function create($blogTitle, $blogPost, $user_FK){
 	
 		
