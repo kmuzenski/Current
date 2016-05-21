@@ -162,13 +162,6 @@ class CategoryCrud {
 
 
 class blogCrud {	
-	public $user_id;
-
-
-        public function __construct($user_id){
-                $this->user_id = $user_id;
-        }
-
 
 	public function create($blogTitle, $blogPost, $user_FK){
 		if ( !valid($blogTitle) || !valid($blogPost) || !valid($user_FK)) {
@@ -179,8 +172,6 @@ class blogCrud {
 			$sql = "INSERT INTO blog (blogTitle,blogPost,user_FK) values(?, ?, ?)";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($blogTitle,$blogPost,$user_FK));
-
-
 			Database::disconnect();
 		
 		}
