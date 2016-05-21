@@ -9,7 +9,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-              <a class="navbar-brand" href="index.php"><img src="assets/img/WFDlogo.png" width="150"></a>
         </div>
          
      <div id="navbar" class="collapse navbar-collapse">
