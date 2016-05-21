@@ -168,14 +168,14 @@ class blogCrud {
 	public function create($blogTitle, $blogPost, $user_FK){
 	
 		
-		if ( !valid($blogTitle) || !valid($blogPost)) {
+		if ( !valid($blogTitle) || !valid($blogPost) || !valid($user_FK)) {
 			return false;
 		} else {
 
 			$pdo = Database::connect();
-			$sql = "INSERT INTO blog (blogTitle,blogPost) values(?, ?)";
+			$sql = "INSERT INTO blog (blogTitle,blogPost,user_FK) values(?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($blogTitle,$blogPost));
+			$q->execute(array($blogTitle,$blogPost,$user_FK));
 			Database::disconnect();
 		
 		}
