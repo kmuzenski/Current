@@ -19,7 +19,7 @@ try{
       $q = $pdo->prepare($sql);
       $q->execute(array(':id' => $_GET['id']));
       $data = $q->fetchAll(PDO::FETCH_ASSOC);
-      echo $data;     
+      print_r($data);     
       return $data;
       } catch (PDOException $error){
 
