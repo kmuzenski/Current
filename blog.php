@@ -81,43 +81,20 @@ Database::disconnect();
 <br><br><br><br><br><br>
 
 <div class="container">
- <div class="row">
- 	<center>
-      <table class="table table-striped table-bordered">
-        <thead>
-          <tr>
-            <th>blog title</th>
-            <th>blog post</th>
-            <th>user_FK</th>
-            <th>Action</th>
-          
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-               $blog = new blogCrud($_SESSION['uid']);
-                
- 		foreach ($blog->read() as $row) {
-		echo '<tr>';
-                echo '<form method="POST" action="updateBlog.php">';
-                echo '<input type="hidden" name="id" value="'.$row['id'].'">';
-                echo '<td><input type="text" name="blogTitle" value="'.$row['blogTitle'].'"></td>'; 
-                echo '<td><input type="text" name="blogPost" value="'.$row['blogPost'].'"></td>';
-                echo '<td><input type="text" name="user_FK" value="'.$row['user_FK'].'"></td>';
-                echo '<br><br>';
-                echo '<td><input type="submit" value="Update">';
-                echo '</form>';
-                echo '<form method="POST" action="blogDelete.php">';
-                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-                echo '<input type="submit" value="Delete"></td>';
+<div class="row">
+ 	
 
-                echo '</form>';
-                echo '</tr>';
-             }
-		?>
-        </tbody>
-      </table>
-  </center>
+<?php
+
+	$blog = new blogCrud($_SESSION['uid']);
+	foreach ($blog->read() as $row) { 
+	echo '<p>Blog Title: </p>'.$row['blogTitle'].'<br>';
+	echo '<p>Blog Post: </p>'.$row['blogPost'].'';	
+	}
+
+?>
+     
+ 
     </div>
 </div>
 
