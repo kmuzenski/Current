@@ -29,7 +29,9 @@
 <br><br><br><br><br><br>
 
 <div class="container">
+<div class="row">
 
+<div class="col-xs-6">
 <h3>Create a Blog Post</h3>
 
 <form class="form" action="blog.php" method="post">
@@ -77,13 +79,11 @@ Database::disconnect();
 <button type="submit" class="btn btn-success">Create</button>
 </div>
 </form>
-</div> <!-- /container -->
+</div> <!--end column -->
 <br><br><br><br><br><br>
 
-<div class="container">
-<div class="row">
- 	
 
+ <div class="col-xs-6">	
 <?php
 
 	$blog = new blogCrud($_SESSION['uid']);
@@ -96,10 +96,10 @@ Database::disconnect();
 	}
 
 ?>
-     
- 
 </div>
-</div>
+
+</div><!--end row -->
+</div><!-- end containter -->
 
 <br><br><br>
 <?php require_once('footer.php'); 
