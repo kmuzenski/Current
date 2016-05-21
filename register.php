@@ -8,10 +8,11 @@
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $location = $_POST['location'];
    
    
     $userCreate = new UserCrud();
-    $_SESSION['uid'] = $userCreate->create($username,$email,$password); 
+    $_SESSION['uid'] = $userCreate->create($username,$email,$password,$location); 
    
 
 	 header('Location: index.php');
@@ -76,6 +77,17 @@
 
        <?php if (!empty($passwordError)): ?>
         <span class="help-inline"><?php echo $passwordError;?></span>
+        <?php endif;?>
+       </div>
+       </div>
+
+        <div class="control-group <?php echo !empty($locationError)?'error':'';?>">
+        <label class="control-label">location</label>
+        <div class="controls">
+       <input name="location" type="text" placeholder="location" value="<?php echo !empty($location)?$location:'';?>">
+
+       <?php if (!empty($locationError)): ?>
+        <span class="help-inline"><?php echo $locationError;?></span>
         <?php endif;?>
        </div>
        </div>

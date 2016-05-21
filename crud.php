@@ -18,13 +18,13 @@ public $user_id;
 
 
 
-	public function create($username, $email, $password){
-		if (!valid($username) || !valid($email) || !valid($password)) {
+	public function create($username, $email, $password, $location){
+		if (!valid($username) || !valid($email) || !valid($password) || !valid($location)) {
 			return false;
 		} else {
 
 			$pdo = Database::connect();
-			$sql = "INSERT INTO user (username,email,password) values(?, ?, ?)";
+			$sql = "INSERT INTO user (username,email,password,location) values(?, ?, ?, ?)";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($username,$email,$password));
 
