@@ -10,7 +10,7 @@
     $blogPost = $_POST['blogPost'];
     $user_FK = $_POST[$_SESSION['uid']];
       
-    $blogCreate = new blogCrud();
+    $blogCreate = new blogCrud($_SESSION['uid']);
     $newBlog = $blogCreate->create($blogTitle,$blogPost,$user_FK); 
    
 	header('Location: blog.php');
