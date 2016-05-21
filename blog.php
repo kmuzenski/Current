@@ -110,7 +110,7 @@
             <th>blog post</th>
             <th>user_FK</th>
             <th>Action</th>
-            <th>Action</th>
+          
           </tr>
         </thead>
         <tbody>
@@ -121,7 +121,7 @@
 		echo '<tr>';
                 echo '<form method="POST" action="updateBlog.php">';
                 echo '<input type="hidden" name="id" value="'.$row['id'].'">';
-               echo '<td><input type="text" name="blogTitle" value="'.$row['blogTitle'].'"></td>'; 
+                echo '<td><input type="text" name="blogTitle" value="'.$row['blogTitle'].'"></td>'; 
                 echo '<td><input type="text" name="blogPost" value="'.$row['blogPost'].'"></td>';
                 echo '<td><input type="text" name="user_FK" value="'.$row['user_FK'].'"></td>';
                 echo '<br><br>';
