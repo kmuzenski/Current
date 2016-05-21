@@ -1,17 +1,20 @@
 <?php 
 require_once('session.php');
 require_once('database.php');
-	require_once('crud.php'); 
-	Database::connect();
+require_once('crud.php'); 
+Database::connect();
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <?php require_once('header.php'); ?>
  
 <body>
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
+
 <h1>story page </h1>
+
 <?php
 try{
       
@@ -19,8 +22,10 @@ try{
       $q = $pdo->prepare($sql);
       $q->execute(array(':id' => $_GET['id']));
 
-      print_r($q);
-      //return $data;
+
+      $data = $q->fetch();
+      print_r($data);
+     // return $data;
       } catch (PDOException $error){
 
       header( "Location: 500.php" );
@@ -30,7 +35,7 @@ try{
 
 <?php require_once('footer.php');
  Database::disconnect();
-  ?>
+?>
 
 </body>
 </html>
