@@ -203,6 +203,23 @@ class blogCrud {
 
     }
 
+    public function readBlog(){
+		try{
+			$pdo = Database::connect();
+			$sql = 'SELECT * FROM blog WHERE id = ?';
+			$q = $pdo->prepare($sql);
+			$q->execute(array($this->user_id));
+			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+	        	Database::disconnect();
+	        	return $data;
+			} catch (PDOException $error){
+
+			header( "Location: 500.php" );
+			//echo $error->getMessage();
+		}
+
+    }
+
 /*	public function update($username,$email,$password){
 		if (!valid($username) || !valid($email) || !valid($password)) {
 			return false;

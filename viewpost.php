@@ -18,8 +18,10 @@ try{
       $sql = 'SELECT * FROM blog WHERE id = :id';
       $q = $pdo->prepare($sql);
       $q->execute(array(':id' => $_GET['id']));
+
+
       $data = $q->fetch();
-      print_r($data);
+      echo $data;
       return $data;
       } catch (PDOException $error){
 
