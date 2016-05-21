@@ -165,7 +165,7 @@ class blogCrud {
 
 
 	public function create($blogTitle, $blogPost, $user_FK){
-		if ( !valid($blogTitle) || !valid($blogPost || !valid($user_FK)) {
+		if ( !valid($blogTitle) || !valid($blogPost) || !valid($user_FK)) {
 			return false;
 		} else {
 

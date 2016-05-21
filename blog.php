@@ -16,13 +16,9 @@
    
 
 	 header('Location: blog.php');
-    }
-
-  
+    } 
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
