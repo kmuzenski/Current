@@ -58,10 +58,10 @@
 
 <br><br><br>
 <?php
-/*
-// try {
-//$pdo = Database::connect();
-//$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+$pdo = Database::connect();
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "SELECT `user`.`id`, `user`.`username` FROM `user`";
 $user = query($sql);
 echo "<select name='user_FK'>";
@@ -69,10 +69,8 @@ foreach ($user as $row) {
 echo "<option value='" . $row['id'] . "'>" . $row['username'] . "</option>";
 }
 echo "</select>";
-//} catch (PDOException $e) {
-//echo $e->getMessage();
-//Database::disconnect(); 
-//} */
+
+Database::disconnect();  
 ?>
 <br><br><br>
 
