@@ -164,16 +164,15 @@ class CategoryCrud {
 class blogCrud {	
 
 	public function create($blogTitle, $blogPost, $user_FK){
+		$user_FK = $_SESSION['uid'];
 		if ( !valid($blogTitle) || !valid($blogPost) || !valid($user_FK)) {
 			return false;
 		} else {
 
 			$pdo = Database::connect();
-			$user_FK = $_SESSION['uid'];
-			
-			$sql = "INSERT INTO blog (blogTitle,blogPost,user_FK) values(?, ?, user_FK)";
+			$sql = "INSERT INTO blog (blogTitle,blogPost) values(?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($blogTitle,$blogPost,$user_FK));
+			$q->execute(array($blogTitle,$blogPost));
 			Database::disconnect();
 		
 		}
