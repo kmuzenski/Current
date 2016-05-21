@@ -1,17 +1,19 @@
 <?php require_once('session.php'); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <?php require_once('header.php'); ?>
- 
 <body>
+
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 
-	<div class="row">
-			<div class="col-xs-12" id="app"></div>
-		</div>
+<center>
+<h3>SUCCESFULLY REGISTERED</h3>
+<br><br><br>
+<p>go <a href="index.php">back</a> or <a href="loginpage.php">login</a>.</p>
+</center>
 
+<br><br><br><br><br><br>
 <?php require_once('footer.php'); ?>
-<script src="app.js"></script>
 </body>
 </html>
