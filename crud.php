@@ -165,7 +165,7 @@ class blogCrud {
 
 	public function create($blogTitle, $blogPost, $user_FK){
 		$user_FK = $_SESSION['uid'];
-		if ( !valid($blogTitle) || !valid($blogPost) || !valid($user_FK)) {
+		if ( !valid($blogTitle) || !valid($blogPost)) {
 			return false;
 		} else {
 
