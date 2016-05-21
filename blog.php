@@ -125,11 +125,11 @@
                 echo '<td><input type="text" name="blogPost" value="'.$row['blogPost'].'"></td>';
                 echo '<td><input type="text" name="user_FK" value="'.$row['user_FK'].'"></td>';
                 echo '<br><br>';
-                echo '<td><input type="submit" value="Update"></td>';
+                echo '<td><input type="submit" value="Update">';
                 echo '</form>';
                 echo '<form method="POST" action="blogDelete.php">';
                 echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-                echo '<td><input type="submit" value="Delete"></td>';
+                echo '<input type="submit" value="Delete"></td>';
 
                 echo '</form>';
                 echo '</tr>';
