@@ -58,6 +58,7 @@
 
 <br><br><br>
 <?php
+/*
 // try {
 //$pdo = Database::connect();
 //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -71,7 +72,7 @@ echo "</select>";
 //} catch (PDOException $e) {
 //echo $e->getMessage();
 //Database::disconnect(); 
-//}
+//} */
 ?>
 <br><br><br>
 
