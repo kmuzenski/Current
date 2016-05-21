@@ -80,6 +80,7 @@ Database::disconnect();
 </div> <!-- /container -->
 <br><br><br><br><br><br>
 
+<div class="container">
  <div class="row">
  	<center>
       <table class="table table-striped table-bordered">
