@@ -21,7 +21,7 @@ try{
 
 
       $data = $q;
-      echo $data;
+      print_r($data);
       return $data;
       } catch (PDOException $error){
 
