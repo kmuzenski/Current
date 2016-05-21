@@ -19,10 +19,8 @@ try{
       $q = $pdo->prepare($sql);
       $q->execute(array(':id' => $_GET['id']));
 
-
-      $data = $q;
-      print_r($data);
-      return $data;
+      print_r($q);
+      //return $data;
       } catch (PDOException $error){
 
       header( "Location: 500.php" );
