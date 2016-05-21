@@ -8,10 +8,10 @@
       // keep track post values
     $blogTitle = $_POST['blogTitle'];
     $blogPost = $_POST['blogPost'];
-    $user_FK = $_POST['user_FK'];
+    $user_FK = $_POST[$_SESSION['uid']];
       
     $blogCreate = new blogCrud();
-    $_SESSION['uid'] = $blogCreate->create($blogTitle,$blogPost,$user_FK); 
+    $newBlog = $blogCreate->create($blogTitle,$blogPost,$user_FK); 
    
 	header('Location: blog.php');
     } 
