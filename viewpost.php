@@ -19,13 +19,13 @@ try{
       $q = $pdo->prepare($sql);
       $q->execute(array(':id' => $_GET['id']));
       $data = $q->fetchAll(PDO::FETCH_ASSOC);
-      
+    foreach ($data as $row) {  
     echo '<table class="table table-striped table-bordered">';
     echo '<p>Date Posted:<br>'.$row['postDate'].'</p><br>';
     echo '<p>Blog Title:<br>'.$row['blogTitle'].'</p><br>';
     echo '<p>Blog Post:<br>'.$row['blogPost'].'</p><br><br><br>';
     echo '</table>';
-
+}
       return $data;
       } catch (PDOException $error){
 
