@@ -169,6 +169,7 @@ class blogCrud {
 		} else {
 
 			$pdo = Database::connect();
+			$user_FK = $_SESSION['uid'];
 			$sql = "INSERT INTO blog (blogTitle,blogPost,user_FK) values(?, ?, ?)";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($blogTitle,$blogPost,$user_FK));

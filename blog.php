@@ -8,7 +8,7 @@
       // keep track post values
     $blogTitle = $_POST['blogTitle'];
     $blogPost = $_POST['blogPost'];
-    $user_FK = $_POST[$_SESSION['uid']];
+    $user_FK = $_POST['user_FK'];
       
     $blogCreate = new blogCrud();
     $_SESSION['uid'] = $blogCreate->create($blogTitle,$blogPost,$user_FK); 
