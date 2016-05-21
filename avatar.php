@@ -1,7 +1,7 @@
 <?php
   require_once('database.php');
-	require_once('session.php');
-	require_once('crud.php');
+  require_once('session.php');
+  require_once('crud.php');
 
 	if ( !empty($_POST)) {
       // keep track post values

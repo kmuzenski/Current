@@ -15,7 +15,7 @@
     $_SESSION['uid'] = $userCreate->create($username,$email,$password,$location); 
    
 
-	 header('Location: avatar.php');
+	 header('Location: index.php');
     }
 
   
@@ -87,7 +87,7 @@
         <div class="controls">
        <input name="location" type="text" placeholder="location" value="<?php echo !empty($location)?$location:'';?>">
 
-       <?php if (!empty($locationError)): ?>
+       <?php if (!empty($locationError)): ?> 
         <span class="help-inline"><?php echo $locationError;?></span>
         <?php endif;?>
        </div>
