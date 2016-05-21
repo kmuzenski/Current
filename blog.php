@@ -58,7 +58,7 @@
 
 <br><br><br>
 <?php
- try {
+// try {
 //$pdo = Database::connect();
 //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "SELECT `user`.`id`, `user`.`username` FROM `user`";
@@ -68,8 +68,8 @@ foreach ($user as $row) {
 echo "<option value='" . $row['id'] . "'>" . $row['username'] . "</option>";
 }
 echo "</select>";
-} catch (PDOException $e) {
-echo $e->getMessage();
+//} catch (PDOException $e) {
+//echo $e->getMessage();
 //Database::disconnect(); 
 }
 ?>
