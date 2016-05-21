@@ -26,7 +26,7 @@ public $user_id;
 			$pdo = Database::connect();
 			$sql = "INSERT INTO user (username,email,password,location) values(?, ?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($username,$email,$password));
+			$q->execute(array($username,$email,$password,$location));
 
 
 			Database::disconnect();
