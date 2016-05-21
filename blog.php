@@ -71,7 +71,7 @@ echo "</select>";
 //} catch (PDOException $e) {
 //echo $e->getMessage();
 //Database::disconnect(); 
-}
+//}
 ?>
 <br><br><br>
 
