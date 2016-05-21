@@ -164,7 +164,9 @@ class CategoryCrud {
 class blogCrud {	
 
 	public function create($blogTitle, $blogPost, $user_FK){
+	try {	
 		$user_FK = $_SESSION['uid'];
+		print_r($user_FK);
 		if ( !valid($blogTitle) || !valid($blogPost)) {
 			return false;
 		} else {
@@ -176,6 +178,9 @@ class blogCrud {
 			Database::disconnect();
 		
 		}
+	} catch (PDOException $error) {
+		echo $error->getMessage();
+	}
 	}
 
 	public function read(){
