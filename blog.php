@@ -47,7 +47,7 @@
 <div class="control-group <?php echo !empty($blogPostError)?'error':'';?>">
 <label class="control-label">Blog Post</label>
 <div class="controls">
-<input name="blogPost" type="text" style="height:300px;width:300px" placeholder="blogPost" value="<?php echo !empty($blogPost)?$blogPost:'';?>">
+<input name="blogPost" type="text" style="height:300px" placeholder="blogPost" value="<?php echo !empty($blogPost)?$blogPost:'';?>">
 <?php if (!empty($blogPostError)): ?>
 <span class="help-inline"><?php echo $blogPostError;?></span>
 <?php endif;?>
