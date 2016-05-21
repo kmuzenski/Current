@@ -20,7 +20,7 @@ try{
       $q->execute(array(':id' => $_GET['id']));
 
 
-      $data = $q->fetch();
+      $data = $q;
       echo $data;
       return $data;
       } catch (PDOException $error){
