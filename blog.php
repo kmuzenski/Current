@@ -37,7 +37,7 @@
 <div class="control-group <?php echo !empty($blogTitleError)?'error':'';?>">
 <label class="control-label">Blog Title</label>
 <div class="controls">
-<input name="blogTitle" type="text"  placeholder="blogTitle" value="<?php echo !empty($blogTitle)?$blogTitle:'';?>">
+<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="<?php echo !empty($blogTitle)?$blogTitle:'';?>">
 <?php if (!empty($blogTitleError)): ?>
 <span class="help-inline"><?php echo $blogTitleError;?></span>
 <?php endif; ?>
@@ -47,7 +47,7 @@
 <div class="control-group <?php echo !empty($blogPostError)?'error':'';?>">
 <label class="control-label">Blog Post</label>
 <div class="controls">
-<input name="blogPost" type="text" placeholder="blogPost" value="<?php echo !empty($blogPost)?$blogPost:'';?>">
+<input name="blogPost" type="text" maxlength="10000" placeholder="blogPost" value="<?php echo !empty($blogPost)?$blogPost:'';?>">
 <?php if (!empty($blogPostError)): ?>
 <span class="help-inline"><?php echo $blogPostError;?></span>
 <?php endif;?>
