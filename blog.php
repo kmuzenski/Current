@@ -80,10 +80,9 @@ Database::disconnect();
 </div>
 </form>
 </div> <!--end column -->
-<br><br><br><br><br><br>
 
-
- <div class="col-xs-6">	
+<div class="col-xs-6">	
+<h3> Recent Blog Posts </h3>
 <?php
 
 	$blog = new blogCrud($_SESSION['uid']);
