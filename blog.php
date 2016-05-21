@@ -89,7 +89,7 @@ Database::disconnect();
 	$blog = new blogCrud($_SESSION['uid']);
 	foreach ($blog->read() as $row) { 
 	echo '<p>Blog Title: </p>'.$row['blogTitle'].'<br>';
-	echo '<p>Blog Post: </p>'.$row['blogPost'].'';	
+	echo '<p>Blog Post: </p>'.$row['blogPost'].'<br>';	
 	}
 
 ?>
