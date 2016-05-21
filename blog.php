@@ -88,10 +88,10 @@ Database::disconnect();
 
 	$blog = new blogCrud($_SESSION['uid']);
 	foreach ($blog->read() as $row) { 
-	echo '<table>'	
+	echo '<table>';
 	echo '<p>Blog Title:<br>'.$row['blogTitle'].'</p><br>';
 	echo '<p>Blog Post:<br>'.$row['blogPost'].'</p><br><br><br>';
-	echo '</table>'	
+	echo '</table>';
 	}
 
 ?>
