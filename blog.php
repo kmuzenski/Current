@@ -70,7 +70,7 @@ echo "<option value='" . $row['id'] . "'>" . $row['username'] . "</option>";
 echo "</select>";
 } catch (PDOException $e) {
 echo $e->getMessage();
-Database::disconnect(); 
+//Database::disconnect(); 
 }
 ?>
 <br><br><br>
