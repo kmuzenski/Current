@@ -16,7 +16,22 @@ require_once('crud.php');
 <h1>story page </h1>
 
 <?php
+try{
+      $pdo = Database::connect();
+      $sql = 'SELECT * FROM blog WHERE id = :id';
+      $q = $pdo->prepare($sql);
+      $q->execute(array(':id' => $_GET['id']));
 
+
+      $data = $q->fetch();
+      print_r($data);
+      Database::disconnect();
+     // return $data;
+      } catch (PDOException $error){
+
+     // header( "Location: 500.php" );
+      echo $error->getMessage();
+    }
 ?>
 
 <?php require_once('footer.php');
