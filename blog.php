@@ -129,6 +129,7 @@
                 echo '<form method="POST" action="blogDelete.php">';
                 echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                 echo '<td><input type="submit" value="Delete"></td>';
+                echo '<br>';
                 echo '</form>';
                 echo '</tr>';
              }
