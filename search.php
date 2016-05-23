@@ -23,6 +23,7 @@ $search = $_POST['search'];
 $query = $pdo->prepare("SELECT * FROM blog WHERE blogTitle LIKE '%$search%' LIMIT 0, 10");
 $query->bindValue(1, "%$search%", PDO::PARAM_STR);
 $query->execute();
+print_r($query);
 
 if ($query > 0){
 	echo "<p>Search Results</p>";
