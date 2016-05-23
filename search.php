@@ -24,7 +24,7 @@ $query = $pdo->prepare("SELECT * FROM blog WHERE blogTitle LIKE '%$search%' LIMI
 $query->bindValue(1, "%$search%", PDO::PARAM_STR);
 $query->execute();
 
-if (!$query->rowCount() == 0){
+if ($query > 0){
 	echo "<p>Search Results</p>";
 while ($results = $query->fetch()) {
 	echo "<p>" . $results['blogTitle'] . "</p>";
