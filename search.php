@@ -18,7 +18,7 @@ $search = $_POST['search'];
 
 $pdo = Database::connect();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = "SELECT * FROM blog WHERE blogTitle LIKE '$search%'";
+$sql = "SELECT * FROM blog WHERE blogTitle LIKE '%$search%'";
 $q = $pdo->prepare($sql);
 $q->execute();
 $results = $q->fetchAll(PDO::FETCH_ASSOC);
