@@ -25,7 +25,7 @@ $results = $q->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($results as $row) {
 	echo '<p>' . $row['blogTitle'] . '<br>';
-	echo $row['blogPost'] . '</p>';
+	
 }
 
 Database::disconnect();
