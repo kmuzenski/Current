@@ -26,9 +26,7 @@ $query->execute();
 
 if ($query > 0){
 	echo "<p>Search Results</p>";
-while ($results = $query->fetch()) {
-	echo "<p>" . $results['blogTitle'] . "</p>";
-}
+	echo "<p>" . $query['blogTitle'] . "</p>";
 
 }
 else {
