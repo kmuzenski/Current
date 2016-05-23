@@ -109,7 +109,7 @@ Database::disconnect();
 Database::disconnect();?>
 <script>
 $(document).ready(function() {
-var show_per_page = 5;
+var show_per_page = 10;
 var number_of_items = $("#content").children().size();
 var number_of_pages = Math.ceil(number_of_items/show_per_page);
 
