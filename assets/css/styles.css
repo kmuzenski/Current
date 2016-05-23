@@ -1,35 +1,56 @@
-body {
-background-color:#e9f8ed;	
+html, body {
+	  		background-color: #ffffff;
+	  		color: #333 ;
+	  		text-align: center;
+		}
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
 }
+
+.navbar li { 
+	color: #333 
+}
+
+
+@font-face {
+	font-family:new_media;
+	src: url(../fonts/NewMedia.ttf);
+}
+
+
 h1 {
-	color:#850707;
-  font-family: Arial Rounded MT Bold;
+	font-family:new_media;
+	font-size: 64px;
 }
 
 h2 {
-	color:#850707;
-   font-family: Arial Rounded MT Bold;
+	font-family:new_media;
+	font-size: 46px;
 }
 
-h3 {
-	color:#850707;
-   font-family: Arial Rounded MT Bold;
+h4 {
+	font-family:new_media;
+	font-size: 30px;
 }
 
 a {
-	color:#850707;
-   font-family: Arial Rounded MT Bold;
+	font-family:new_media;
+	font-size: 20px;
 }
 
 p {
-	color:#850707;
-   font-family: Arial Rounded MT Bold;
-}
-
-table {
-	border: 1px solid black;
+	font-family:new_media;
+	font-size: 20px;
 }
 
 
-
-
+#blog {
+	border-radius: 25px;
+	border: 2px solid #ffffff;
+	padding: 20px;
+	width: 500px;
+	height: 250px;
+}
