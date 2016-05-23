@@ -112,13 +112,13 @@ Database::disconnect();
 Database::disconnect();?>
 <script>
 $(document).ready(function() {
-  /* $('input.typeahead').typeahead({
+   $('input.typeahead').typeahead({
     name: 'typeahead',
     remote: 'search.php?key=%QUERY',
     limit: 10
   });
 
-*/
+
 
 var show_per_page = 10;
 var number_of_items = $("#content").children().size();
