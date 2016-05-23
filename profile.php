@@ -56,6 +56,8 @@ require_once('crud.php');
 </div>
 
 
+
+
 <?php require_once('footer.php');
 Database::disconnect();
 ?>
