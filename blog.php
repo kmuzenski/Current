@@ -106,9 +106,9 @@ Database::disconnect();
 <br><br><br>
 <center>
 
-<form method="POST" action="search.php">
+<form action="search.php" method="POST">
 <input type="text" name="search">
-<input type="submit" name="search">
+<input type="submit" value="submit">
 </form>
 
 <br><br><br>
