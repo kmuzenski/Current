@@ -167,7 +167,7 @@ function go_to_page (page_num) {
   end_on = start_from + show_per_page;
 
   $("#content").children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
-  $('page_link[longdesc' + page_num + ']').addClass('active_page').siblings('.active_page').removeClass('active_page');
+  $('.page_link[longdesc' + page_num + ']').addClass('active_page').siblings('.active_page').removeClass('active_page');
   $('#current_page').val(page_num);
 }
 </script>
