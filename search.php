@@ -29,6 +29,7 @@ foreach ($results as $row) {
 
 
 	echo "<p>" . $row['blogTitle'] . "</p>";
+	echo "<p>" . $row['blogPost'] . "</p>";
 
 }
 
