@@ -110,18 +110,20 @@ Database::disconnect();
 <br><br><br>
 <?php require_once('footer.php'); 
 Database::disconnect();?>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="typeahead.min.js"></script>
+
 <script>
-$(document).ready(function () {
-  $('input.typeahead').typeahead({
+$(document).ready(function() {
+   $('input.typeahead').typeahead({
     name: 'typeahead',
     remote: 'search.php?key=%QUERY',
     limit: 10
   });
-});
-</script>
-<script>
-$(document).ready(function() {
+
+
+
 var show_per_page = 10;
 var number_of_items = $("#content").children().size();
 var number_of_pages = Math.ceil(number_of_items/show_per_page);
