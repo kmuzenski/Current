@@ -105,7 +105,11 @@ Database::disconnect();
 </div><!-- end containter -->
 <br><br><br>
 <center>
-<input type="text" name="typeahead">
+
+<form method="POST" action="search.php">
+<input type="text" name="search">
+<input type="submit" name="search">
+</form>
 
 <br><br><br>
 <?php require_once('footer.php'); 
