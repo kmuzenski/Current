@@ -137,7 +137,7 @@ navigation_html += '<a class="next_link" href="javascript:next();">Next</a>';
 
 $("#page_navigation").html(navigation_html);
 
-$("#page_navigation .page_link:first").addClass('active_page');
+$('#page_navigation .page_link:first').addClass('active_page');
 
 $("#content").children().css('display', 'none');
 $("#content").children().slice(0, show_per_page).css('display', 'block');
@@ -147,7 +147,7 @@ $("#content").children().slice(0, show_per_page).css('display', 'block');
 
 function previous() {
   new_page = parseInt($("#current_page").val()) - 1;
-  if ($(".active_page").previous('.page_link').length == true) {
+  if ($(".active_page").prev('.page_link').length == true) {
     go_to_page(new_page);
   }
 }
