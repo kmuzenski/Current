@@ -14,7 +14,7 @@ require_once('session.php');
  
  
 <?php
-$search = $_POST['user_search'];
+$search = $_POST['search'];
 
 $pdo = Database::connect();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
