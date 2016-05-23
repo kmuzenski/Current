@@ -147,7 +147,7 @@ $("#content").children().slice(0, show_per_page).css('display', 'block');
 
 function previous() {
   new_page = parseInt($("#current_page").val()) - 1;
-  if ($(".active_page").prev('.page_link').length == true) {
+  if ($(".active_page").prevAll('.page_link').length == true) {
     go_to_page(new_page);
   }
 }
