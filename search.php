@@ -14,19 +14,25 @@ require_once('session.php');
  
  
 <?php
-$search = $_POST['search'];
 
 $pdo = Database::connect();
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = "SELECT * FROM blog WHERE blogTitle LIKE %$search";
-$q = $pdo->prepare($sql);
-$q->execute();
-$results = $q->fetchAll(PDO::FETCH_ASSOC);
 
-foreach ($results as $row) {
-	echo '<p>' . $row['blogTitle'] . '</p>';
-	echo $row;
-	
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$search = $_POST['search'];
+$query = $pdo->prepare("SELECT * FROM blog WHERE blogTitle LIKE '%$search%' LIMIT 0, 10");
+$query->bindValue(1, "%$search%", PDO::PARAM_STR);
+$query->execute();
+
+if (!$query->rowCount() == 0){
+	echo "<p>Search Results</p>";
+while ($results = $query->fetch()) {
+	echo "<p>" . $results['blogTitle'] . "</p>";
+}
+
+}
+else {
+	echo 'No Results Match Search';
 }
 
 Database::disconnect();
