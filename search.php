@@ -14,12 +14,12 @@ require_once('session.php');
  
  
 <?php
-
+$search = $_POST['search'];
 $pdo = Database::connect();
 
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$search = $_POST['search'];
+//$search = $_POST['search'];
 $query = $pdo->prepare("SELECT * FROM blog WHERE blogTitle LIKE '%$search%' LIMIT 0, 10");
 $query->bindValue(1, "%$search%", PDO::PARAM_STR);
 $query->execute();
