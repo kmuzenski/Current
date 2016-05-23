@@ -18,7 +18,7 @@ $search = $_POST['user_search'];
 
 $pdo = Database::connect();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = "SELECT * FROM `blog` WHERE `blog`.`blogTitle` LIKE :search OR `blog`.`blogPost` LIKE :search";
+$sql = "SELECT * FROM `blog` WHERE `blog`.`blogTitle` LIKE :search";
 $q = $pdo->prepare($sql);
 $q->bindValue(':search', '%' . $search . '%');
 $q->execute();
