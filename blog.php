@@ -124,10 +124,10 @@ var show_per_page = 10;
 var number_of_items = $("#content").children().size();
 var number_of_pages = Math.ceil(number_of_items/show_per_page);
 
-$("#current_page").val();
+$("#current_page").val(0);
 $("#show_per_page").val(show_per_page);
 
-var navigation_html = '<a class="previous_link" href="javascript:previous();">previous</a>';
+var navigation_html = '<a class="previous_link" href="javascript:previous();">Prev</a>';
 var current_link = 0;
 while (number_of_pages > current_link) {
   navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link + ')" longdesc"' + current_link + '">' + (current_link + 1) + '</a>';
