@@ -82,8 +82,8 @@ Database::disconnect();
 
 <div class="col-xs-6">	
 <h3> Recent Blog Posts </h3>
-<input type="hidden" id="current_page">
-<input type="hidden" id ="show_per_page">
+<input type="hidden" id="current_page"/>
+<input type="hidden" id ="show_per_page"/>
 <div id ="content">
 <?php
 
