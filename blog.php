@@ -103,10 +103,23 @@ Database::disconnect();
 
 </div><!--end row -->
 </div><!-- end containter -->
+<br><br><br>
+<center>
+<input type="text" name="typeahead">
 
 <br><br><br>
 <?php require_once('footer.php'); 
 Database::disconnect();?>
+<script src="typeahead.min.js"></script>
+<script>
+$(document).ready(function () {
+  $('input.typeahead').typeahead({
+    name: 'typeahead',
+    remote: 'search.php?key=%QUERY',
+    limit: 10
+  });
+});
+</script>
 <script>
 $(document).ready(function() {
 var show_per_page = 10;
