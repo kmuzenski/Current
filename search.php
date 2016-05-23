@@ -23,17 +23,15 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $query = $pdo->prepare("SELECT * FROM blog WHERE blogTitle LIKE '%$search%' LIMIT 0, 10");
 $query->bindValue(':search', '%' . $search . '%');
 $query->execute();
-$query->fetchAll(PDO::FETCH_ASSOC);
-print_r($query);
+$results = $query->fetchAll(PDO::FETCH_ASSOC);
 
-if ($query > 0){
-	echo "<p>Search Results</p>";
-	echo "<p>" . $query['blogTitle'] . "</p>";
+foreach ($results as $row) {
+
+
+	echo "<p>" . $row['blogTitle'] . "</p>";
 
 }
-else {
-	echo 'No Results Match Search';
-}
+
 
 Database::disconnect();
 
