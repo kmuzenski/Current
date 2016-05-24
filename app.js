@@ -6,7 +6,7 @@ function request() {
 
 
 	
-		url: "http://content.guardianapis.com/tags?q=apple&section=technology&show-references=all&api-key=af3824b3-0cbb-482c-9d7a-0df1cca0f3d0",
+		url: "http://content.guardianapis.com/search?q=us-news&order-by=newest&api-key=af3824b3-0cbb-482c-9d7a-0df1cca0f3d0",
 		success: function(r) {
 			console.log(r);
 
