@@ -7,10 +7,8 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 
-	<div id="app">
-		<div class="row">
+	<div class="row" id="app">
 
-		</div>
 	</div>
 
 <?php require_once('footer.php'); ?>
