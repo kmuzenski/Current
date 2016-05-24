@@ -8,11 +8,10 @@
 <br><br><br><br><br><br>
 
 	<div class="row">
-		<div id="app">
-
+		<div id="app" class="col-xs-6">
 		</div>
 	
-	<div id="nyt">
+	<div id="nyt" class="col-xs-6">
 	</div>
 
 </div>
