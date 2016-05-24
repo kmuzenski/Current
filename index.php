@@ -8,10 +8,12 @@
 <br><br><br><br><br><br>
 <div class="container">
 <div class="row">
-		<div id="app" class="col-xs-6">
+		<div id="app" class="col-xs-5">
 		</div>
+		<div id="space" class="col-xs=2">
+		</div> 
 	
-	<div id="nyt" class="col-xs-6">
+	<div id="nyt" class="col-xs-5">
 	</div>
 
 </div>
