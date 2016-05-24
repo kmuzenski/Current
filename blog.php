@@ -8,7 +8,7 @@
       // keep track post values
     $blogTitle = $_POST['blogTitle'];
     $blogPost = $_POST['blogPost'];
-    $user_FK = $_POST['user_FK'];
+    $user_FK = $_SESSION['uid'];
       
     $blogCreate = new blogCrud();
     $response = $blogCreate->create($blogTitle,$blogPost,$user_FK); 
@@ -58,7 +58,7 @@
 <br><br><br>
 <?php
 
-
+/*
 $pdo = Database::connect();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "SELECT `user`.`id`, `user`.`username` FROM `user`";
@@ -70,6 +70,7 @@ echo "<option value='" . $row['id'] . "'>" . $row['username'] . "</option>";
 echo "</select>";
 
 Database::disconnect();  
+*/
 ?>
 <br><br><br>
 
