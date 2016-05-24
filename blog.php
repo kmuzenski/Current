@@ -80,7 +80,7 @@ Database::disconnect();
 </form>
 </div> <!--end column -->
 
-<div class="col-xs-6 col-md-12">	
+<div class="col-xs-6">	
 <h3> Recent Blog Posts </h3>
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
@@ -117,7 +117,7 @@ Database::disconnect();?>
 <script>
 $(document).ready(function() {
  
-var show_per_page = 10;
+var show_per_page = 5;
 var number_of_items = $("#content").children().size();
 var number_of_pages = Math.ceil(number_of_items/show_per_page);
 
