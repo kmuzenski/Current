@@ -58,7 +58,6 @@ require_once('crud.php');
 <?php
 
   $blog = new blogCrud();
-  
                 
   foreach ($blog->readUserBlog() as $row) {
     echo '<p>' .$row['blogTitle']. '</p><br>';

@@ -202,12 +202,12 @@ class blogCrud {
     	public function readUserBlog(){
 		try{
 			$pdo = Database::connect();
-			$sql = 'SELECT * FROM blog WHERE user_fk IN (SELECT id FROM user WHERE user_FK = ?) ORDER BY id DESC';
-
+			//$sql = 'SELECT * FROM blog WHERE user_fk IN (SELECT id FROM user WHERE user_FK = ?) ORDER BY id DESC';
+			$sql = 'SELECT * FROM blog WHERE user_fk = ?';
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->user_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
-	        	Database::disconnect();
+	        Database::disconnect();
 	        	return $data;
 			} catch (PDOException $error){
 
