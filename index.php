@@ -10,6 +10,9 @@
 	<div class="row" id="app">
 
 	</div>
+	<br><br><br><br><br><br>
+	<div id="nyt">
+	</div>
 
 <?php require_once('footer.php'); ?>
 
