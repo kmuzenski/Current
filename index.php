@@ -7,9 +7,11 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 
-	<div class="row">
-			<div class="col-xs-12" id="app"></div>
+	<div id="app">
+		<div class="row">
+
 		</div>
+	</div>
 
 <?php require_once('footer.php'); ?>
 
