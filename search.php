@@ -20,7 +20,7 @@ $pdo = Database::connect();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 //$search = $_POST['search'];
-$query = $pdo->prepare("SELECT * FROM blog WHERE blogTitle LIKE '%$search%' LIMIT 0, 10");
+$query = $pdo->prepare("SELECT * FROM blog WHERE blogTitle LIKE '%$search%' LIMIT 0, 10 ORDER BY postDATE DESC");
 $query->bindValue(':search', '%' . $search . '%');
 $query->execute();
 $results = $query->fetchAll(PDO::FETCH_ASSOC);
