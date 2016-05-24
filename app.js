@@ -39,9 +39,9 @@ function nyt () {
 		method: 'GET',
 	}).done(function(result) {
 		$.each(result.response.docs, function(key, value){ 
-		$("#nyt").append('<p>' + value[0].headline.main + '</p>');
-		$("#nyt").append('<p>' + value[0].web_url + '</p>');
-		$("#nyt").append('<p>' + value[0].snippet + '</p>');
+		$("#nyt").append('<p>' + value.headline.main + '</p>');
+		$("#nyt").append('<p>' + value.web_url + '</p>');
+		$("#nyt").append('<p>' + value.snippet + '</p>');
 		console.log(result);
 	});
 	}).fail(function(err){
