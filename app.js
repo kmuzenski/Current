@@ -38,10 +38,10 @@ function nyt () {
 		url: url,
 		method: 'GET',
 	}).done(function(result) {
-		$.each(result, function(key, value){ 
-		$("#nyt").append('<p>' + result.response.docs[0].headline.main + '</p>');
-		$("#nyt").append('<p>' + result.response.docs[0].web_url + '</p>');
-		$("#nyt").append('<p>' + result.response.docs[0].snippet + '</p>');
+		$.each(result.response, function(key, value){ 
+		$("#nyt").append('<p>' + value.docs[0].headline.main + '</p>');
+		$("#nyt").append('<p>' + value.docs[0].web_url + '</p>');
+		$("#nyt").append('<p>' + value.docs[0].snippet + '</p>');
 		console.log(result);
 	});
 	}).fail(function(err){
