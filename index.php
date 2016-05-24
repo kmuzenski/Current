@@ -11,6 +11,7 @@
 		<div id="app" class="col-xs-5">
 		</div>
 		<div id="space" class="col-xs=2">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</div> 
 	
 	<div id="nyt" class="col-xs-5">
