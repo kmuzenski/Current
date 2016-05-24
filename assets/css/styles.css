@@ -44,8 +44,13 @@ a {
 p {
 	font-family:new_media;
 	font-size: 20px;
+
 }
 
+table {
+	width: 300px;
+	height: 300px;
+}
 
 #blogTable {
 	border-radius: 25px;
