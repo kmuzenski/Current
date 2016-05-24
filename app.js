@@ -28,5 +28,23 @@ function request() {
 })	
 }
 
+function nyt () {
+	var url ="https://api.nytimes.com/svc/search/v2/articlesearch.json";
+	url += '?' + $.param({
+	'api-key': "33b85401cda2437c829b4679e0cd3d35"
+	});
+
+	$.ajax({
+		url: url,
+		method: 'GET',
+	}).done(function(result) {
+		console.log(result);
+	}).fail(function(err){
+		throw err;
+	});
+}
+
 
 request();
+nyt();
+
