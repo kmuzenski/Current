@@ -38,6 +38,7 @@ function nyt () {
 		url: url,
 		method: 'GET',
 	}).done(function(result) {
+		document.write(result);
 		console.log(result);
 	}).fail(function(err){
 		throw err;
