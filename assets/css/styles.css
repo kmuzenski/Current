@@ -47,16 +47,10 @@ p {
 
 }
 
-table {
+#blogTable {
 	width: 300px;
 	height: 300px;
 }
 
-#blogTable {
-	border-radius: 25px;
-	border: 2px solid #ffffff;
-	padding: 20px;
-	width: 300px;
-	height: 300px;
-}
+
 
