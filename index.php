@@ -6,8 +6,8 @@
 <body>
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
-
-	<div class="row">
+<div class="container">
+<div class="row">
 		<div id="app" class="col-xs-6">
 		</div>
 	
@@ -15,7 +15,7 @@
 	</div>
 
 </div>
-
+</div>
 <?php require_once('footer.php'); ?>
 
 </body>
