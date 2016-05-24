@@ -11,7 +11,7 @@
 
 	</div>
 	<br><br><br><br><br><br>
-	<div id="nyt">
+	<div class="row" id="nyt">
 	</div>
 
 <?php require_once('footer.php'); ?>
