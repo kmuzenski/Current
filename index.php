@@ -7,12 +7,15 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 
-	<div class="row" id="app">
+	<div class="row">
+		<div id="app">
 
+		</div>
+	
+	<div id="nyt">
 	</div>
-	<br><br><br><br><br><br>
-	<div class="row" id="nyt">
-	</div>
+
+</div>
 
 <?php require_once('footer.php'); ?>
 
