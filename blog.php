@@ -31,7 +31,7 @@
 <div class="container">
 <div class="row">
 
-<div class="col-xs-6 col-md-12">
+<div class="col-xs-6">
 <h3>Create a Blog Post</h3>
 
 <form class="form" action="blog.php" method="post">
