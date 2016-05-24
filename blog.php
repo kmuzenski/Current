@@ -90,9 +90,9 @@ Database::disconnect();
 	$blog = new blogCrud($_SESSION['uid']);
 	foreach ($blog->read() as $row) { 
 	echo '<table class="table table-striped table-bordered">';
-	echo '<p>Date Posted:<br>'.$row['postDate'].'<br>';
-	echo 'Blog Title:<br><a href="viewpost.php?id='.$row['id'].'">'.$row['blogTitle'].'</a><br>';
-	echo 'Blog Post:<br>'.$row['blogPost'].'</p><br><br><br>';
+	echo '<tr><td>Date Posted:'.$row['postDate'].'<br></td></tr>';
+	echo '<tr><td>Blog Title:<a href="viewpost.php?id='.$row['id'].'">'.$row['blogTitle'].'</a><br></td></tr>';
+	echo '<tr><td>Blog Post:'.$row['blogPost'].'</td></tr><br><br><br>';
 	echo '</table>';
 	}
 
