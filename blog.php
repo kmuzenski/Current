@@ -98,6 +98,8 @@ Database::disconnect();
 
 ?>
 </div>
+</div>
+
 <div id ="page_navigation"></div>
 </div>
 
