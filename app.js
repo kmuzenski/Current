@@ -13,7 +13,7 @@ function request() {
 
 
 			$.each(r.response.results, function(key, value){
-				$("#app").append('<div class="col-md-4"><table><tr><td>' + value.sectionName + '</td></tr><tr><td>' + value.webTitle + '</td></tr><tr><td><a href="' + value.webUrl + '">View Article</a></td></tr></table></div>');
+				$("#app").append('<div class="col-md-6"><table><tr><td>' + value.sectionName + '</td></tr><tr><td>' + value.webTitle + '</td></tr><tr><td><a href="' + value.webUrl + '">View Article</a></td></tr></table></div>');
 				
 
 
