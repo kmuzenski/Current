@@ -40,6 +40,7 @@ function nyt () {
 	}).done(function(result) {
 		$("#nyt").append('<p>' + result.response.docs[0].headline.main + '</p>');
 		$("#nyt").append('<p>' + result.response.docs[0].web_url + '</p>');
+		$("#nyt").append('<p>' + result.response.docs[0].snippet + '</p>');
 		console.log(result);
 	}).fail(function(err){
 		throw err;
