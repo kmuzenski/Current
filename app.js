@@ -13,7 +13,7 @@ function request() {
 
 
 			$.each(r.response.results, function(key, value){
-				$("#app").append('<div class="col-md-4"><table><tr><td><h4><strong>' + value.webTitle + '</strong></h4></td></tr><tr><td>' + value.sectionId + '</td></tr><tr><td><a href="' + value.webUrl + '"target="_blank">View Article</a></td></tr></table></div>');
+				$("#app").append('<div class="col-md-4"><table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.webTitle + '</strong></h4></td></tr><tr><td>' + value.sectionId + '</td></tr><tr><td><a href="' + value.webUrl + '"target="_blank">View Article</a></td></tr></table></div>');
 				
 
 
@@ -39,7 +39,7 @@ function nyt () {
 		method: 'GET',
 	}).done(function(result) {
 		$.each(result.response.docs, function(key, value){ 
-		$("#nyt").append('<div class="col-md-4"><table><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table></div>');
+		$("#nyt").append('<div class="col-md-4"><table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table></div>');
 
 	
 		console.log(result);
