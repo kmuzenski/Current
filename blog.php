@@ -28,7 +28,9 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 
-
+<div class="container">
+<div class="row">
+<div class="col-xs-6">
 <h3>Create a Blog Post</h3>
 
 <form class="form" action="blog.php" method="post">
@@ -75,11 +77,11 @@ Database::disconnect();
 <button type="submit" class="btn btn-success">Create</button>
 </div>
 </form>
+</div>
 
 
 
-
-	
+<div class="col-xs-6">	
 <h3> Recent Blog Posts </h3>
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
@@ -101,7 +103,9 @@ Database::disconnect();
 <div id ="page_navigation"></div>
 </div>
 
-
+</div>
+</div>
+</div>
 
 <br><br><br>
 <center>
