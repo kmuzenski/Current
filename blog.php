@@ -31,7 +31,7 @@
 <div class="container">
 <div class="row">
 
-<div class="col-xs-6">
+<div class="col-xs-6 col-md-12">
 <h3>Create a Blog Post</h3>
 
 <form class="form" action="blog.php" method="post">
@@ -80,7 +80,7 @@ Database::disconnect();
 </form>
 </div> <!--end column -->
 
-<div class="col-xs-6">	
+<div class="col-xs-6 col-md-12">	
 <h3> Recent Blog Posts </h3>
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
@@ -116,14 +116,7 @@ Database::disconnect();
 Database::disconnect();?>
 <script>
 $(document).ready(function() {
- /*  $('input.typeahead').typeahead({
-    name: 'typeahead',
-    remote: 'search.php?key=%QUERY',
-    limit: 10
-  });
-*/
-
-
+ 
 var show_per_page = 10;
 var number_of_items = $("#content").children().size();
 var number_of_pages = Math.ceil(number_of_items/show_per_page);
