@@ -55,8 +55,17 @@ require_once('crud.php');
 </div>
 </div>
 
+<?php
+
+  $blog = new blogCrud();
+                
+  foreach ($user->readUserBlog() as $row) {
+    echo '<p>' .$row['blogTitle']. '</p><br>';
+
+  }
 
 
+?>
 
 <?php require_once('footer.php');
 Database::disconnect();
