@@ -38,7 +38,7 @@ function nyt () {
 		url: url,
 		method: 'GET',
 	}).done(function(result) {
-		$("#nyt").append('<p>' + result.response.docs[0].headline + '</p>');
+		$("#nyt").append('<p>' + result.response.docs[0].headline[0] + '</p>');
 		$("#nyt").append('<p>' + result.response.docs[0].web_url + '</p>');
 		console.log(result);
 	}).fail(function(err){
