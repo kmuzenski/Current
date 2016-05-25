@@ -18,6 +18,10 @@
 
 	
 	<div id="nyt" class="col-xs-6">
+	<form action="nytSearch.php" method="POST">
+	<input type="text" name="searchTerm">
+	<input type="submit" value="submit">
+	</form>
 	</div>
 
 </div>
