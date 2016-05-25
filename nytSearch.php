@@ -30,7 +30,7 @@ function nyt () {
 
 	$.ajax({
 		url: url,
-		method: 'GET',
+		method: 'POST',
 		dataType:'jsonp',
 	}).done(function(result) {
 		$.each(result.response.docs, function(key, value){ 
