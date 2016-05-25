@@ -231,14 +231,14 @@ class blogCrud {
     }
 
 
-	public function update($postDate,$blogTitle,$blogPost,$blog_id){
-		if (!valid($postDate) || !valid($blogTitle) || !valid($blogPost)) {
+	public function update($blogTitle,$blogPost,$blog_id){
+		if (!valid($blogTitle) || !valid($blogPost)) {
 			return false;
 		} else {
 			$pdo = Database::connect();
-			$sql = "UPDATE blog SET postDate = ?, blogTitle = ?, blogPost = ? WHERE id = ?";
+			$sql = "UPDATE blog SET blogTitle = ?, blogPost = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($postDate,$blogTitle,$blogPost,$blog_id));
+			$q->execute(array($blogTitle,$blogPost,$blog_id));
 			Database::disconnect();
 			return true;
 		}
