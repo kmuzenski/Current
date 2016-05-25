@@ -9,8 +9,8 @@
 <div class="container">
 <div class="row">
 	<div id="app" class="col-xs-6">
-	<form action="searchGaurd.php" method="POST">
-	<input type="text" name="searchTerm">
+	<form action="searchGuard.php" method="POST">
+	<input type="text" name="searchTerm" placeholder="Search The Guardian">
 	<input type="submit" value="submit">
 	</form>
 

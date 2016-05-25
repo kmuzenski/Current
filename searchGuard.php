@@ -7,7 +7,7 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 
-	<div id="gaurdSearch" class="col-xs-6">
+	<div id="guardSearch" class="col-xs-6">
 	
 
 	</div>
@@ -36,7 +36,7 @@ var $_POST = <?php echo json_encode($_POST) ?>;
 
 
 			$.each(r.response.results, function(key, value){
-				$("#gaurdSearch").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.webTitle + '</strong></h4></td></tr><tr><td>' + value.sectionId + '</td></tr><tr><td><a href="' + value.webUrl + '"target="_blank">View Article</a></td></tr></table>');
+				$("#guardSearch").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.webTitle + '</strong></h4></td></tr><tr><td>' + value.sectionId + '</td></tr><tr><td><a href="' + value.webUrl + '"target="_blank">View Article</a></td></tr></table>');
 				
 
 
