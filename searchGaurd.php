@@ -29,7 +29,7 @@ function request() {
 
 
 	
-		url: "http://content.guardianapis.com/search?q=" + searchTerm + "&order-by=newest&api-key=af3824b3-0cbb-482c-9d7a-0df1cca0f3d0",
+		url: "http://content.guardianapis.com/search?q=" + $_POST["searchTerm"] + "&order-by=newest&api-key=af3824b3-0cbb-482c-9d7a-0df1cca0f3d0",
 		success: function(r) {
 			console.log(r);
 
