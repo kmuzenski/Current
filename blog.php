@@ -27,6 +27,12 @@
 
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
+<center>
+<form action="search.php" method="POST">
+<input type="text" name="search" placeholder="Search Blog Posts">
+<input type="submit" value="submit">
+</form>
+</center>
 
 <div class="container">
 <div class="row">
@@ -109,12 +115,9 @@ Database::disconnect();
 </div>
 
 <br><br><br>
-<center>
 
-<form action="search.php" method="POST">
-<input type="text" name="search">
-<input type="submit" value="submit">
-</form>
+
+
 
 <br><br><br>
 <?php require_once('footer.php'); 
