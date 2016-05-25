@@ -65,7 +65,7 @@ require_once('crud.php');
     echo '<form method="POST" action="blogDelete.php">';
     echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
     echo '<td><input type="submit" value="Delete"></td>';
-    echo '</form></td</tr>';
+    echo '</form></td></tr>';
     echo '</table>';
    
    
