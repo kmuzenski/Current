@@ -26,10 +26,10 @@ document.write($_POST["searchTerm"]);
 		method: 'POST',
 		crossDomain: true,
 
-		success: function(r) {
+		success: function(result) {
 			console.log(r);
 
-			$.each(r.docs, function(key, value){
+			$.each(result.docs, function(key, value){
 			$("#nyt").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table>');
 				
 		
