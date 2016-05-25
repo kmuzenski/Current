@@ -60,9 +60,11 @@ require_once('crud.php');
   $blog = new blogCrud($_SESSION['uid']);
                 
   foreach ($blog->readUserBlog() as $row) {
-    echo '<p>' .$row['blogTitle']. '</p><br>';
-    echo '<p>' .$row['postDate']. '</p><br>';
-    echo '<p>' .$row['blogPost']. '</p><br>';
+    echo '<table class="table table-striped table-bordered">';
+    echo '<tr><td><p>' .$row['blogTitle']. '</p><br></td></tr>';
+    echo '<tr><td><p>' .$row['postDate']. '</p><br><tr><td>';
+    echo '<tr><td><p>' .$row['blogPost']. '</p><br><tr><td>';
+    echo '</table>';
    
 
   }
