@@ -20,7 +20,7 @@
 <script>
 function nyt() {
 var $_POST = <?php echo json_encode($_POST) ?>;
-//document.write($_POST["searchTerm"]);	
+document.write($_POST["searchTerm"]);	
 	$.ajax({
 		url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + $_POST["searchTerm"] +"&api-key=33b85401cda2437c829b4679e0cd3d35",
 		method: 'POST',
