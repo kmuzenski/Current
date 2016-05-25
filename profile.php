@@ -61,7 +61,9 @@ require_once('crud.php');
                 
   foreach ($blog->readUserBlog() as $row) {
     echo '<p>' .$row['blogTitle']. '</p><br>';
-    echo '<p>do this</p>';
+    echo '<p>' .$row['postDate']. '</p><br>';
+    echo '<p>' .$row['blogPost']. '</p><br>';
+   
 
   }
 
