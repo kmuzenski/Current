@@ -27,9 +27,10 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($results as $row) {
 
-
-	echo "<p>" . $row['blogTitle'] . "</p>";
-	echo "<p>" . $row['blogPost'] . "</p><br>";
+	echo '<table class="table table-striped table-bordered">';
+	echo '<tr><td><p>' . $row['blogTitle'] . '</p></td></tr>';
+	echo '<tr><td><p>' . $row['blogPost'] . '</p><br></td></tr>';
+	echo '</table>';
 
 }
 
