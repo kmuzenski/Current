@@ -49,6 +49,7 @@ document.write($_POST["searchTerm"]);
 }
 })	
 }
+request();
 </script>
 
 </body>
