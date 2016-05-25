@@ -14,7 +14,7 @@ error_reporting(E_ALL);
       
          
       $blog = new blogCrud($_SESSION['uid']);
-      $response = $blog->update($blogTitle,$postDate,$blogPost,$id);
+      $response = $blog->update($postDate,$blogTitle,$blogPost,$id);
 
       if($response) {
         header('Location: profile.php');
