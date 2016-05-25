@@ -18,9 +18,9 @@
 
 <?php require_once('footer.php'); ?>
 <script>
-var searchTerm = <?php echo json_encode($_POST) ?>;
+var $_POST = <?php echo json_encode($_POST) ?>;
 document.write($_POST["searchTerm"]);
-console.log(searchTerm);
+//console.log(searchTerm);
 function request() {	
 	return $.ajax({
 		type:'GET',
