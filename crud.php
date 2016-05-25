@@ -244,15 +244,15 @@ class blogCrud {
 		}
 	}
 
-/*	public function delete($user_id){
+	public function delete($blog_id){
 
         $pdo = Database::connect();
-        $sql = "DELETE FROM user WHERE id = ?"; //taken from SQL query on phpMyAdmin
+        $sql = "DELETE FROM blog WHERE id = ?"; //taken from SQL query on phpMyAdmin
         $q = $pdo->prepare($sql);
-        $q->execute(array($user_id));
+        $q->execute(array($blog_id));
         Database::disconnect();
         return true;
 
 	}
-*/
+
 }
