@@ -53,6 +53,7 @@ require_once('crud.php');
   $blog = new blogCrud($_SESSION['uid']);
                 
   foreach ($blog->readUserBlog() as $row) {
+    
     echo '<form method="POST" action="updateBlog.php">';
     echo '<input type="hidden" name="id" value="'.$row['id'].'">';
     echo '<table class="table table-striped table-bordered">';

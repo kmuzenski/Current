@@ -13,7 +13,7 @@ require_once 'crud.php';
       
          
       $blog = new blogCrud($_SESSION['uid']);
-      $response = $blog->update($blogTitle,$postDate,$blogPost);
+      $response = $blog->update($blogTitle,$postDate,$blogPost,$id);
 
     }
 
