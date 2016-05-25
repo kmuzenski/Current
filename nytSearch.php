@@ -25,18 +25,23 @@ var $_POST = <?php echo json_encode($_POST) ?>;
 		url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + $_POST["searchTerm"] +"&api-key=33b85401cda2437c829b4679e0cd3d35",
 		method: 'POST',
 		crossDomain: true,
-		//dataType:'jsonp',
-	}).done(function(result) {
-		$.each(result.docs, function(key, value){ 
-		$("#nyt").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table>');
 
-	
-		console.log(result);
-	});
-	}).fail(function(err){
-		throw err;
-	});
+		success: function(r) {
+			console.log(r);
+
+
+
+			$.each(r.response.docs, function(key, value){
+			$("#nyt").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table>');
+				
+		
+			});
+			
+		
 }
+})	
+}
+
 
 nyt();
 </script>
