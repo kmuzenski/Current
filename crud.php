@@ -231,20 +231,20 @@ class blogCrud {
     }
 
 
-/*	public function update($username,$email,$password){
-		if (!valid($username) || !valid($email) || !valid($password)) {
+	public function update($postDate,$blogTitle,$blogPost, $user_id){
+		if (!valid($postDate) || !valid($blogTitle) || !valid($blogPost)) {
 			return false;
 		} else {
 			$pdo = Database::connect();
-			$sql = "UPDATE user SET username = ?, email = ?, password = ? WHERE id = ?";
+			$sql = "UPDATE blog SET postDate = ?, blogTitle = ?, blogPost = ? WHERE user_fk = ?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($username,$email,$password,$id));
+			$q->execute(array($postDate,$blogTitle,$blogPost,$user_id));
 			Database::disconnect();
 			return true;
 		}
 	}
 
-	public function delete($user_id){
+/*	public function delete($user_id){
 
         $pdo = Database::connect();
         $sql = "DELETE FROM user WHERE id = ?"; //taken from SQL query on phpMyAdmin
