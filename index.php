@@ -9,6 +9,11 @@
 <div class="container">
 <div class="row">
 	<div id="app" class="col-xs-6">
+	<form action="searchGaurd.php" method="POST">
+	<input type="text" name="searchTerm">
+	<input type="submit" value="submit">
+	</form>
+
 	</div>
 
 	
