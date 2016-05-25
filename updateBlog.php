@@ -22,7 +22,7 @@ error_reporting(E_ALL);
       }
       */
       }
-    } catch(Exception $e) {
+    } catch(PDO::Exception $e) {
       $e->getMessage();
       
     }
