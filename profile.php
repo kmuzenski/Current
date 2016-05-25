@@ -31,9 +31,10 @@ require_once('crud.php');
 	
   echo '<form method="POST" action="updateUser.php">';
   echo '<input type="hidden" name="id" value="'.$row['id'].'">';
-  echo '<tr><td><input type="text" name="username" value="'.$row['blogTitle'].'"></td></tr>'; 
-  echo '<tr><td><input type="text" name="email" value="'.$row['postDate'].'"></td></tr>';
-  echo '<tr><td><input type="text" name="password" value="'.$row['blogPost'].'"></td></tr>';
+  echo '<tr><td><input type="text" name="username" value="'.$row['username'].'"></td></tr>'; 
+  echo '<tr><td><input type="text" name="email" value="'.$row['email'].'"></td></tr>';
+  echo '<tr><td><input type="text" name="password" value="'.$row['password'].'"></td></tr>';
+  echo '<tr><td><input type="text" name="email" value="'.$row['locatoin'].'"></td></tr>';
   echo '<tr><td><input type="submit" value="Update"></td></tr>';
   echo '</form>';
 
@@ -56,8 +57,8 @@ require_once('crud.php');
     echo '<input type="hidden" name="id" value="'.$row['id'].'">';
     echo '<table class="table table-striped table-bordered">';
     echo '<tr><td><input type="text" name="username" value="'.$row['BlogTitle'].'"></td></tr>'; 
-  echo '<tr><td><input type="text" name="email" value="'.$row['email'].'"></td></tr>';
-  echo '<tr><td><input type="text" name="password" value="'.$row['password'].'"></td></tr>';
+    echo '<tr><td><input type="text" name="email" value="'.$row['postDate'].'"></td></tr>';
+  echo '<tr><td><input type="text" name="password" value="'.$row['blogPost'].'"></td></tr>';
     echo '</table>';
     echo '</form>';
    
