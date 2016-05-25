@@ -12,7 +12,7 @@ require_once('session.php');
 
 <h1>search results</h1>
  
- <div id ="page_navigation"></div>
+ 
 <?php
 $search = $_POST['search'];
 $pdo = Database::connect();
@@ -39,6 +39,7 @@ foreach ($results as $row) {
 Database::disconnect();
 
 ?>
+<div id ="page_navigation"></div>
 </div>
 <?php require_once('footer.php');?>
 <script>
