@@ -17,10 +17,10 @@ error_reporting(E_ALL);
       $updateblog = new blogCrud($_SESSION['uid']);
       $response = $updateblog->update($blogTitle,$blogPost,$id);
 
-    /*  if($response) {
+     if($response) {
         header('Location: profile.php');
       }
-      */
+      
       }
     } catch(Exception $e) {
       echo $e->getMessage();
