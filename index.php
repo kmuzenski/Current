@@ -19,7 +19,7 @@
 	
 	<div id="nyt" class="col-xs-6">
 	<form action="nytSearch.php" method="POST">
-	<input type="text" name="searchTerm">
+	<input type="text" name="searchTerm" placeholder="Search The New York Times">
 	<input type="submit" value="submit">
 	</form>
 	</div>
