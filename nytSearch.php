@@ -24,7 +24,7 @@ function nyt () {
 	document.write($_POST["searchTerm"]);	
 	var url ="https://api.nytimes.com/svc/search/v2/articlesearch.json";
 	url += '?' + $.param({
-	'q' :  $_POST["searchTerm"]
+	'q' :  "$_POST['searchTerm']"
 	'api-key': "33b85401cda2437c829b4679e0cd3d35"
 	});
 
