@@ -247,7 +247,7 @@ class blogCrud {
 	public function delete($blog_id){
 
         $pdo = Database::connect();
-        $sql = "DELETE FROM blog WHERE blog_fk = ?"; //taken from SQL query on phpMyAdmin
+        $sql = "DELETE FROM blog WHERE id = ?"; //taken from SQL query on phpMyAdmin
         $q = $pdo->prepare($sql);
         $q->execute(array($blog_id));
         Database::disconnect();
