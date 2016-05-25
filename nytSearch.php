@@ -31,6 +31,7 @@ function nyt () {
 	$.ajax({
 		url: url,
 		method: 'POST',
+		crossDomain: true,
 		dataType:'jsonp',
 	}).done(function(result) {
 		$.each(result.response.docs, function(key, value){ 
