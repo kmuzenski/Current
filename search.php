@@ -41,6 +41,8 @@ Database::disconnect();
 ?>
 <div id ="page_navigation"></div>
 </div>
+
+<br><br><br><br><br>
 <?php require_once('footer.php');?>
 <script>
 $(document).ready(function() {

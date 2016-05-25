@@ -162,6 +162,12 @@ class CategoryCrud {
 
 
 class blogCrud {	
+	public $user_id;
+
+
+	public function __construct($user_id){
+		$this->user_id = $user_id;
+	}
 
 	//$user_FK = $_SESSION['uid'];
 	
@@ -174,9 +180,16 @@ class blogCrud {
 
 			$pdo = Database::connect();
 			$sql = "INSERT INTO blog (blogTitle,blogPost,user_FK) values(?, ?, ?)";
+
 			$q = $pdo->prepare($sql);
 			$q->execute(array($blogTitle,$blogPost,$user_FK));
+			$blog_id = $pdo->lastInsertId();
+
+			$sql = "INSERT INTO user_blog (blog_fk, user_fk) values(?,?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($blog_id, $this->user_id));
 			Database::disconnect();
+			return true;
 		
 		}
 	
