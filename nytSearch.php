@@ -7,7 +7,7 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 
-	<div id="nytSearch" class="col-xs-6">
+	<div id="nyt" class="col-xs-6">
 	
 
 	</div>
