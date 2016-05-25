@@ -21,7 +21,7 @@
 
 function request() {
 var $_POST = <?php echo json_encode($_POST) ?>;
-document.write($_POST["searchTerm"]);	
+//document.write($_POST["searchTerm"]);	
 	return $.ajax({
 		type:'GET',
 		dataType:'jsonp',
