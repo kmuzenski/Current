@@ -17,43 +17,36 @@ require_once('crud.php');
 
 <div class="container">
 <div class="row">
+<div class="col-md-6">
 
 <table class="table table-striped table-bordered">
 <thead>
-<tr>
-  <th>username</th>
-  <th>email</th>
-  <th>password</th>
-  <th>location</th>
-  <th>Action</th>
-  <th>Action</th>
-</tr>
+<h3>Update User Info</h3>
 </thead>
 <tbody>
 <?php
   $user = new UserCrud($_SESSION['uid']);
                 
  	foreach ($user->read() as $row) {
-	echo '<tr>';
+	
   echo '<form method="POST" action="updateUser.php">';
   echo '<input type="hidden" name="id" value="'.$row['id'].'">';
-  echo '<td><input type="text" name="username" value="'.$row['username'].'"></td>'; 
-  echo '<td><input type="text" name="email" value="'.$row['email'].'"></td>';
-  echo '<td><input type="text" name="password" value="'.$row['password'].'"></td>';
-  echo '<td><input type="text" name="location" value="'.$row['location'].'"></td>';
-  echo '<td><input type="submit" value="Update"></td>';
+  echo '<tr><td><input type="text" name="username" value="'.$row['username'].'"></td></tr>'; 
+  echo '<tr><td><input type="text" name="email" value="'.$row['email'].'"></td></tr>';
+  echo '<tr><td><input type="text" name="password" value="'.$row['password'].'"></td></tr>';
+  echo '<tr><td><input type="text" name="location" value="'.$row['location'].'"></td></tr>';
+  echo '<tr><td><input type="submit" value="Update"></td></tr>';
   echo '</form>';
-  echo '<form method="POST" action="userDelete.php">';
-  echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-  echo '<td><input type="submit" value="Delete"></td>';
-  echo '</form>';
-  echo '</tr>';
+
+  
   }
 ?>
 </tbody>
 </table>
 </div>
-</div>
+
+<div class="col-md-6">
+
 
 <?php
 
@@ -75,6 +68,9 @@ require_once('crud.php');
 <?php require_once('footer.php');
 Database::disconnect();
 ?>
+</div>
+</div>
+</div>
 
 </body>
 </html>
