@@ -19,6 +19,7 @@
 <?php require_once('footer.php'); ?>
 <script>
 var searchTerm = <?php echo $_POST['searchTerm'] ?>;
+console.log(searchTerm);
 function request() {	
 	return $.ajax({
 		type:'GET',
