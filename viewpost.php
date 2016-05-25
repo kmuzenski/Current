@@ -26,9 +26,9 @@ try{
      // print_r($data);
 
   echo '<table class="table table-striped table-bordered">';
-  echo '<p>Date Posted:<br>'.$data['postDate'].'</p><br>';
-  echo '<p>Blog Title:<br>'.$data['blogTitle'].'</a></p><br>';
-  echo '<p>Blog Post:<br>'.$data['blogPost'].'</p><br><br><br>';
+  echo '<tr><td><p>Date Posted:<br>'.$data['postDate'].'</p><br></td></tr>';
+  echo '<tr><td><p>Blog Title:<br>'.$data['blogTitle'].'</a></p><br></td></tr>';
+  echo '<tr><td><p>Blog Post:<br>'.$data['blogPost'].'</p><br><br><br></td></tr>';
   echo '</table>';
 
 
