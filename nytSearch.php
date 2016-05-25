@@ -18,18 +18,11 @@
 
 <?php require_once('footer.php'); ?>
 <script>
-
-function nyt () {
-	var $_POST = <?php echo json_encode($_POST) ?>;
-	document.write($_POST["searchTerm"]);	
-	var url ="https://api.nytimes.com/svc/search/v2/articlesearch.json";
-	url += '?' + $.param({
-	'q' :  "$_POST['searchTerm']",
-	'api-key': "33b85401cda2437c829b4679e0cd3d35"
-	});
-
+function nyt() {
+var $_POST = <?php echo json_encode($_POST) ?>;
+//document.write($_POST["searchTerm"]);	
 	$.ajax({
-		url: url,
+		url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + $_POST["searchTerm"] +"&api-key=33b85401cda2437c829b4679e0cd3d35",
 		method: 'POST',
 		crossDomain: true,
 		//dataType:'jsonp',
@@ -44,6 +37,7 @@ function nyt () {
 		throw err;
 	});
 }
+
 nyt();
 </script>
 
