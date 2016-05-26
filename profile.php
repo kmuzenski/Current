@@ -81,7 +81,6 @@ require_once('crud.php');
 </div>
 
 <div id ="page_navigation"></div>
-</div>
 
 </div>
 
