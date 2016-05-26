@@ -47,6 +47,7 @@ require_once('crud.php');
 
 
 <div class="col-md-6">
+<h3>Edit Your Blog Posts</h3>
 
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
