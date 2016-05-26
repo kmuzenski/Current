@@ -31,6 +31,7 @@ function nytSearch() {
 		
 
 		success: function(result) {
+			$("#nytSearch").append('<p>TESTING</P>');
 			
 			$.each(result.docs, function(key, value){
 				console.log(result);
