@@ -44,6 +44,7 @@
 </div>
 <br><br><br><br><br><br>
 <?php require_once('footer.php'); ?>
+<script src="app.js"></script>
 
 </body>
 </html>
