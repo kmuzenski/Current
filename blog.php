@@ -83,7 +83,7 @@
 	$blog = new blogCrud($_SESSION['uid']);
 	foreach ($blog->read() as $row) { 
 	echo '<table class="table table-striped table-bordered" id="blog">';
-	echo '<tr><td><p>Date Posted:<br>'.$row['postDate'].'<br></p></td></tr>';
+  echo '<tr><td><p>Date Posted:<br>'.$row['postDate'].'<br></p></td></tr>';
 	echo '<tr><td><p>Blog Title:<br><a href="viewpost.php?id='.$row['id'].'">'.$row['blogTitle'].'</a></p><br></td></tr>';
 	echo '<tr><td><p>Blog Post:<br>'.$row['blogPost'].'</p></td></tr>';
   echo '<tr><td><div id="fb-root"></div>';

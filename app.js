@@ -28,26 +28,32 @@ function request() {
 })	
 }
 
-function nyt () {
-	var url ="https://api.nytimes.com/svc/search/v2/articlesearch.json";
-	url += '?' + $.param({
-	'api-key': "33b85401cda2437c829b4679e0cd3d35"
-	});
+function nyt() {
+var $_POST = <?php echo json_encode($_POST) ?>;
 
-	$.ajax({
-		url: url,
-		method: 'GET',
-	}).done(function(result) {
-		$.each(result.response.docs, function(key, value){ 
-		$("#nyt").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table>');
+ return	$.ajax({
+		method:'GET',
+		dataType:'json',
+		
+		//crossDomain: true,
+		url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?sort=newest&api-key=33b85401cda2437c829b4679e0cd3d35",
+		
 
-	
-		console.log(result);
-	});
-	}).fail(function(err){
-		throw err;
-	});
+		success: function(result) {
+		
+			
+			$.each(result.response.docs, function(key, value){
+				console.log(result);
+
+			$("#nytSearch").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table>');
+				
+		
+			});
+					
 }
+})	
+}
+
 
 
 request();
