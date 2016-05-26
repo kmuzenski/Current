@@ -26,7 +26,7 @@ document.write($_POST["searchTerm"]);
 		type:'GET',
 		dataType:'jsonp',
 		crossDomain: true,
-		url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + $_POST["searchTerm"] +"&api-key=33b85401cda2437c829b4679e0cd3d35",
+		url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=globalwarming&api-key=33b85401cda2437c829b4679e0cd3d35",
 		
 
 		success: function(result) {
