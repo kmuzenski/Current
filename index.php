@@ -7,7 +7,12 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 
-<h1>Current</h1>
+<h1>Current<img src="assets/images/wave.png" alt="logo" title="logo" width="200px"></h1>
+<br><br>
+<p>Search for the news stories you want to see</p>
+<br><br>
+	
+
 	<form action="newsSearch.php" method="POST">
 	<input type="text" name="searchTerm" placeholder="Search News">
 	<input type="submit" value="submit">
