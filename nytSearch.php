@@ -50,8 +50,8 @@ document.write($_POST["searchTerm"]);
 function nytSearch () {
 	var $_POST = <?php echo json_encode($_POST) ?>;
 	document.write($_POST["searchTerm"]);
-	var url ="https://api.nytimes.com/svc/search/v2/articlesearch.json";
-	url += '?=$_POST' + $.param({
+	var url ="https://api.nytimes.com/svc/search/v2/articlesearch.json" + "?=$_POST";
+	url += /*'?=$_POST' + */ $.param({
 
 	'api-key': "33b85401cda2437c829b4679e0cd3d35"
 	});
