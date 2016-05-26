@@ -230,14 +230,14 @@ class blogCrud {
 
     }
 
-    public function getAuthor(){
+    public function getAuthor($user_FK){
 		try{
 			$pdo = Database::connect();
 			
-			$sql = 'SELECT * FROM blog WHERE user_FK IN (SELECT id FROM user WHERE id = ?)';
+			$sql = 'SELECT username FROM user WHERE id IN (SELECT user_FK FROM blog WHERE id = ?)';
 			
 			$q = $pdo->prepare($sql);
-			$q->execute(array($this->user_id));
+			$q->execute(array($user_FK));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
 	        Database::disconnect();
 	        	return $data;
