@@ -37,7 +37,7 @@
 
 <div class="container">
 <div class="row">
-<div class="col-xs-6">
+<div class="col-sm-6 col-sm-push-6">
 <h3><p id="title"><strong>Create a Blog Post</strong></p></h3>
 
 <form class="form" action="blog.php" method="post">
@@ -73,7 +73,7 @@
 
 
 
-<div class="col-xs-6">	
+<div class="col-sm-6 col-sm-pull-6">	
 <h3><p id="title"> <strong>Recent Blog Posts</strong> </p></h3>
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
