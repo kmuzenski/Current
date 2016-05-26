@@ -6,6 +6,15 @@
 <body>
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
+
+
+	<form action="nytSearch.php" method="POST">
+	<input type="text" name="searchTerm" placeholder="Search">
+	<input type="submit" value="submit">
+	</form>
+
+	<br><br><br><br><br><br>
+
 <div class="container">
 <div class="row">
 	<div id="app" class="col-xs-6">
