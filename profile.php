@@ -52,7 +52,7 @@ require_once('crud.php');
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
 
-<div id="content">
+<div id="blogcontent">
 <?php
 
   $blog = new blogCrud($_SESSION['uid']);
@@ -97,7 +97,7 @@ Database::disconnect();?>
 $(document).ready(function() {
  
 var show_per_page = 5;
-var number_of_items = $("#content").children().size();
+var number_of_items = $("#blogcontent").children().size();
 var number_of_pages = Math.ceil(number_of_items/show_per_page);
 
 $("#current_page").val(0);
@@ -115,8 +115,8 @@ $("#page_navigation").html(navigation_html);
 
 $('#page_navigation .page_link:first').addClass('active_page');
 
-$("#content").children().css('display', 'none');
-$("#content").children().slice(0, show_per_page).css('display', 'block');
+$("#blogcontent").children().css('display', 'none');
+$("#blogcontent").children().slice(0, show_per_page).css('display', 'block');
 
 
 });
@@ -142,7 +142,7 @@ function go_to_page (page_num) {
   start_from = page_num * show_per_page;
   end_on = start_from + show_per_page;
 
-  $("#content").children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
+  $("#blogcontent").children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
   $('.page_link[longdesc' + page_num + ']').addClass('active_page').siblings('.active_page').removeClass('active_page');
   $('#current_page').val(page_num);
 }
