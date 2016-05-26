@@ -17,6 +17,7 @@ require_once('crud.php');
 
 <div class="container">
 <div class="row">
+
 <div class="col-md-6">
 
 <table class="table table-striped table-bordered">
@@ -45,7 +46,7 @@ require_once('crud.php');
 </div>
 
 
-<div class="col-xs-6">
+<div class="col-md-6">
 
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
