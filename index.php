@@ -9,7 +9,7 @@
 <div class="container">
 	<div class="row">
 <h1>Current<img src="assets/images/wave.png" alt="logo" title="logo" width="100px"></h1>
-<br><br>
+<br>
 <p>Search for the news stories you want to see</p>
 <br><br>
 </div>
