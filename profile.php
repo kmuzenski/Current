@@ -62,10 +62,11 @@ require_once('crud.php');
     echo '<tr><td><p>Blog Post: </p><br><input type="text" name="blogPost" value="'.$row['blogPost'].'"></td></tr>';
     echo '<tr><td><input type="submit" value="Update">';
     echo '</form></td></tr>';
-    echo '<tr><td><form method="POST" action="blogDelete.php">';
+/*    echo '<tr><td><form method="POST" action="blogDelete.php">';
     echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
     echo '<input type="submit" value="Delete">';
     echo '</form></td></tr>';
+*/    
     echo '</table>';
    
    
