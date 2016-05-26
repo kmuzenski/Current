@@ -38,7 +38,7 @@
 <div class="container">
 <div class="row">
 <div class="col-xs-6">
-<h3><p>Create a Blog Post</p></h3>
+<h3><p id="title">Create a Blog Post</p></h3>
 
 <form class="form" action="blog.php" method="post">
 
@@ -90,7 +90,7 @@ Database::disconnect();
 
 
 <div class="col-xs-6">	
-<h3><p> Recent Blog Posts </p></h3>
+<h3><p id="title"> Recent Blog Posts </p></h3>
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
 <div id ="content">
@@ -99,7 +99,7 @@ Database::disconnect();
 	$blog = new blogCrud($_SESSION['uid']);
 	foreach ($blog->read() as $row) { 
 	echo '<table class="table table-striped table-bordered" id="blog">';
-	echo '<tr><td>Date Posted:<br><p>'.$row['postDate'].'<br></p></td></tr>';
+	echo '<tr><td><p>Date Posted:<br>'.$row['postDate'].'<br></p></td></tr>';
 	echo '<tr><td><p>Blog Title:<br><a href="viewpost.php?id='.$row['id'].'">'.$row['blogTitle'].'</a></p><br></td></tr>';
 	echo '<tr><td><p>Blog Post:<br>'.$row['blogPost'].'</p></td></tr>';
   echo '<tr><td><div id="fb-root"></div>';
