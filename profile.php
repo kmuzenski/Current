@@ -80,20 +80,23 @@ require_once('crud.php');
 ?>
 </div>
 
-<div id ="page_navigation"></div>
-
+<div id ="page_navigation">
 </div>
 
 </div>
+
 </div>
+</div>
+
+
 <br><br><br>
 <?php require_once('footer.php');
-Database::disconnect();
-?>
+Database::disconnect();?>
+
 <script>
 $(document).ready(function() {
  
-var show_per_page = 2;
+var show_per_page = 3;
 var number_of_items = $("#content").children().size();
 var number_of_pages = Math.ceil(number_of_items/show_per_page);
 
@@ -144,7 +147,6 @@ function go_to_page (page_num) {
   $('#current_page').val(page_num);
 }
 </script>
-
 
 </body>
 </html>
