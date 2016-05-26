@@ -17,16 +17,13 @@
             
         <ul class="nav navbar-nav">
         
-        <li><a  href="index.php">Home</a></li>                                    
+        <li><a  href="index.php">Home</a></li>    
+
+        <li><a href="blog.php">Blog</a></li>                                
                             
     
         <?php
           if ($loggedin) {
-            echo '<li>';
-            echo '<a href="blog.php">';
-            echo "Blog";
-            echo '</a>';
-            echo '</li>';
             echo '<li>';
             echo '<a href="profile.php">';
             echo "Profile";
