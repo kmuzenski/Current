@@ -44,7 +44,7 @@ require_once('crud.php');
 </tbody>
 </table>
 </div>
-
+<div id ="content">
 <div class="col-md-6">
 <h3> Recent Blog Posts </h3>
 <input type="hidden" id="current_page"/>
