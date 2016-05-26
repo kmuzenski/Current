@@ -34,11 +34,10 @@ require_once('crud.php');
   echo '<tr><td>Username:<br><input type="text" name="username" value="'.$row['username'].'"></td></tr>'; 
   echo '<tr><td>Email:<br><input type="text" name="email" value="'.$row['email'].'"></td></tr>';
   echo '<tr><td>Password:<br><input type="text" name="password" value="'.$row['password'].'"></td></tr>';
-  echo '<tr><td>Location:<br><input type="text" name="email" value="'.$row['location'].'"></td></tr>';
+  echo '<tr><td>Location:<br><input type="text" name="location" value="'.$row['location'].'"></td></tr>';
   echo '<tr><td><input type="submit" value="Update"></td></tr>';
   echo '</form>';
 
-  
   }
 ?>
 </tbody>
@@ -73,7 +72,6 @@ require_once('crud.php');
     echo '</form></td></tr>';
 */    
     echo '</table>';
-   
    
 
   }
