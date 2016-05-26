@@ -230,6 +230,27 @@ class blogCrud {
 
     }
 
+ /*   public function getAuthor(){
+		try{
+			$pdo = Database::connect();
+			$sql = 'SELECT user_fk FROM blog WHERE id = ?';
+			$q = $pdo->prepare($sql);
+			$user_fk = $q->execute(array(
+			//$sql = 'SELECT * FROM blog WHERE user_fk IN (SELECT id FROM user WHERE user_FK = ?) ORDER BY id DESC';
+			$sql = 'SELECT username FROM user WHERE id = ?';
+			$q = $pdo->prepare($sql);
+			$q->execute(array($this->user_id));
+			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+	        Database::disconnect();
+	        	return $data;
+			} catch (PDOException $error){
+
+			header( "Location: 500.php" );
+			//echo $error->getMessage();
+		}
+
+    }
+*/
 
 	public function update($blogTitle,$blogPost,$blog_id){
 		if (!valid($blogTitle) || !valid($blogPost)) {
