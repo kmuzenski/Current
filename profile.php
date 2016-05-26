@@ -79,7 +79,7 @@ require_once('crud.php');
 
 ?>
 </div>
-<br>
+
 <div id ="page_navigation"></div>
 </div>
 
@@ -94,7 +94,7 @@ Database::disconnect();
 <script>
 $(document).ready(function() {
  
-var show_per_page = 3;
+var show_per_page = 1;
 var number_of_items = $("#content").children().size();
 var number_of_pages = Math.ceil(number_of_items/show_per_page);
 
