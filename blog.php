@@ -22,6 +22,13 @@
 <html>
 
 <?php require_once('header.php'); ?>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <body>
 
@@ -101,6 +108,7 @@ Database::disconnect();
 	echo '<tr><td>Date Posted:<br>'.$row['postDate'].'<br></td></tr>';
 	echo '<tr><td>Blog Title:<br><a href="viewpost.php?id='.$row['id'].'">'.$row['blogTitle'].'</a><br></td></tr>';
 	echo '<tr><td>Blog Post:<br>'.$row['blogPost'].'</td></tr>';
+  echo '<div class="fb-share-button" data-href="http://ec2-52-32-48-99.us-west-2.compute.amazonaws.com/Current/viewpost.php?id='.$row['id'].'" data-layout="button" data-mobile-iframe="true"></div>'
 	echo '</table>';
 	}
 
