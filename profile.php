@@ -47,6 +47,8 @@ require_once('crud.php');
 </div>
 </div>
 
+
+<div class="container">
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
 
@@ -82,7 +84,7 @@ require_once('crud.php');
 
 <div id ="page_navigation">
 </div>
-
+</div>
 
 
 
