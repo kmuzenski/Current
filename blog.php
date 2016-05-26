@@ -62,24 +62,8 @@
 </div>
 </div>
 
-<br><br><br>
-<?php
+<br><br>
 
-/*
-$pdo = Database::connect();
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = "SELECT `user`.`id`, `user`.`username` FROM `user`";
-$user = $pdo->query($sql);
-echo "<select name='user_FK'>";
-foreach ($user as $row) {
-echo "<option value='" . $row['id'] . "'>" . $row['username'] . "</option>";
-}
-echo "</select>";
-
-Database::disconnect();  
-*/
-?>
-<br><br><br>
 
 <div class="form-actions">
 <button type="submit" class="btn btn-success"><p>Create</p></button>
