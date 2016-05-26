@@ -7,7 +7,7 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 
-<h1>Current<img src="assets/images/wave.png" alt="logo" title="logo" width="200px"></h1>
+<h1>Current<img src="assets/images/wave.png" alt="logo" title="logo" width="150px"></h1>
 <br><br>
 <p>Search for the news stories you want to see</p>
 <br><br>
