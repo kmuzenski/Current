@@ -24,7 +24,7 @@
 
 <div class="container">
 <div class="row">
-	<div id="app" class="col-xs-6 col-xs-push-6">
+	<div id="app" class="col-sm-6 col-sm-push-6">
 	<form action="searchGuard.php" method="POST">
 	<input type="text" name="searchTerm" placeholder="Search The Guardian">
 	<input type="submit" value="submit">
@@ -33,7 +33,7 @@
 	</div>
 
 	
-	<div id="nyt" class="col-xs-6 col-xs-pull-6">
+	<div id="nyt" class="col-sm-6 col-sm-pull-6">
 	<form action="nytSearch.php" method="POST">
 	<input type="text" name="searchTerm" placeholder="Search The New York Times">
 	<input type="submit" value="submit">
