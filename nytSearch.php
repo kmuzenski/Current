@@ -36,7 +36,7 @@ function nytSearch() {
 				console.log(result);
 
 			$("#nytSearch").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table>');
-				
+			$("#nytSearch").append('<p>TESTING</P>');	
 		
 			});
 			
