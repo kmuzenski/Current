@@ -52,7 +52,7 @@ require_once('crud.php');
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
 
-<div id ="content">
+<div id="content">
 <?php
 
   $blog = new blogCrud($_SESSION['uid']);
@@ -84,6 +84,7 @@ require_once('crud.php');
 
 <div id ="page_navigation">
 </div>
+
 </div>
 
 
