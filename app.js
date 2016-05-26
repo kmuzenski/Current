@@ -29,7 +29,7 @@ function request() {
 }
 
 function nyt() {
-
+var $_POST = <?php echo json_encode($_POST) ?>;
 
  return	$.ajax({
 		method:'GET',
