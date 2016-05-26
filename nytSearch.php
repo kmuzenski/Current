@@ -58,7 +58,7 @@ function nytSearch () {
 
 	$.ajax({
 		url: url,
-		method: 'GET',
+		method: 'POST',
 		crossDomain: true,
 	}).done(function(result) {
 		$.each(result.response.docs, function(key, value){ 
