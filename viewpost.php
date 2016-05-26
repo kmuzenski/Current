@@ -14,7 +14,9 @@ require_once('crud.php');
 <br><br><br><br><br><br>
 
 <h1>story page </h1>
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
 <?php
 try{
       $pdo = Database::connect();
@@ -42,6 +44,8 @@ try{
 <?php require_once('footer.php');
 
 ?>
-
+</div>
+</div>
+</div>
 </body>
 </html>
