@@ -8,8 +8,8 @@
 <br><br><br><br><br><br>
 
 
-	<form action="nytSearch.php" method="POST">
-	<input type="text" name="searchTerm" placeholder="Search">
+	<form action="newsSearch.php" method="POST">
+	<input type="text" name="searchTerm" placeholder="Search News">
 	<input type="submit" value="submit">
 	</form>
 
