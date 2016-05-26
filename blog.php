@@ -102,7 +102,8 @@ Database::disconnect();
 	echo '<tr><td>Date Posted:<br>'.$row['postDate'].'<br></td></tr>';
 	echo '<tr><td>Blog Title:<br><a href="viewpost.php?id='.$row['id'].'">'.$row['blogTitle'].'</a><br></td></tr>';
 	echo '<tr><td>Blog Post:<br>'.$row['blogPost'].'</td></tr>';
-  echo '<div class="fb-share-button" data-href="http://ec2-52-32-48-99.us-west-2.compute.amazonaws.com/Current/viewpost.php?id='.$row['id'].'" data-layout="button" data-mobile-iframe="true"></div>'
+  echo '<div id="fb-root"></div>';
+  echo '<div class="fb-share-button" data-href="http://ec2-52-32-48-99.us-west-2.compute.amazonaws.com/Current/viewpost.php?id='.$row['id'].'" data-layout="button" data-mobile-iframe="true"></div>';
 	echo '</table>';
 	}
 
