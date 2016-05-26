@@ -103,8 +103,8 @@ Database::disconnect();
 	echo '<tr><td>Blog Title:<br><a href="viewpost.php?id='.$row['id'].'">'.$row['blogTitle'].'</a><br></td></tr>';
 	echo '<tr><td>Blog Post:<br>'.$row['blogPost'].'</td></tr>';
   echo '<tr><td><div id="fb-root"></div>';
-  echo '<div class="fb-share-button" data-href="http://ec2-52-32-48-99.us-west-2.compute.amazonaws.com/Current/viewpost.php?id='.$row['id'].'" data-layout="button" data-mobile-iframe="true"></div>';
-  echo '<a href="https://twitter.com/intent/tweet?text=Hello%20world" class="twitter-share-button" data-show-count="false">Tweet</a></td></tr>';
+  echo '<div class="fb-share-button" data-href="http://ec2-52-32-48-99.us-west-2.compute.amazonaws.com/Current/viewpost.php?id='.$row['id'].'" data-layout="button" data-mobile-iframe="true"></div></td></tr>';
+  echo '<tr><td><a href="https://twitter.com/intent/tweet?text=Hello%20world" class="twitter-share-button" data-show-count="false">Tweet</a></td></tr>';
 	echo '</table>';
 	}
 
