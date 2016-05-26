@@ -15,7 +15,7 @@ require_once('session.php');
  <div class="container">
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
-  <div class="content">
+<div class="content">
 <?php
 $search = $_POST['search'];
 $pdo = Database::connect();
@@ -48,7 +48,8 @@ Database::disconnect();
 </div>
 </div>
 <br><br><br><br><br>
-<?php require_once('footer.php');?>
+
+<?php require_once('footer.php'); ?>
 <script>
 $(document).ready(function() {
  
