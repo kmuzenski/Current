@@ -11,7 +11,7 @@ html, body {
 }
 
 .navbar li { 
-	color: #333 
+	color: #333; 
 }
 
 #app {
@@ -50,8 +50,9 @@ html, body {
 
 h1 {
 	font-family:new_media;
-	font-size: 64px;
-}
+	font-size: 80px;
+	color: #A6ABA8;
+}	
 
 h2 {
 	font-family:new_media;
