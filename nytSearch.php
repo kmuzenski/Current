@@ -7,7 +7,7 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 
-	<div id="nyt" class="col-xs-6">
+	<div id="nytSearch" class="col-xs-6">
 	
 
 	</div>
@@ -33,7 +33,7 @@ document.write($_POST["searchTerm"]);
 			
 			$.each(result.docs, function(key, value){
 
-			$("#nyt").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table>');
+			$("#nytSearch").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table>');
 				
 		
 			});
