@@ -44,9 +44,9 @@ require_once('crud.php');
 </tbody>
 </table>
 </div>
+</div>
+</div>
 
-<div class="col-md-6">
-<h3> Recent Blog Posts </h3>
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
 
@@ -83,10 +83,7 @@ require_once('crud.php');
 <div id ="page_navigation">
 </div>
 
-</div>
 
-</div>
-</div>
 
 
 <br><br><br>
