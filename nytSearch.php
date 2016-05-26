@@ -59,7 +59,8 @@ function nytSearch () {
 	$.ajax({
 		url: url,
 		method: 'POST',
-		crossDomain: true,
+		dataType:'jsonp',
+		//crossDomain: true,
 	}).done(function(result) {
 		$.each(result.response.docs, function(key, value){ 
 		$("#nytSearch").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table>');
