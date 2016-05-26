@@ -43,7 +43,7 @@
 <form class="form" action="blog.php" method="post">
 
 <div class="control-group <?php echo !empty($blogTitleError)?'error':'';?>">
-<label class="control-label">Blog Title</label>
+<label class="control-label"><p>Blog Title</p></label>
 <div class="controls">
 <input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="<?php echo !empty($blogTitle)?$blogTitle:'';?>">
 <?php if (!empty($blogTitleError)): ?>
@@ -53,7 +53,7 @@
 </div>
 
 <div class="control-group <?php echo !empty($blogPostError)?'error':'';?>">
-<label class="control-label">Blog Post</label>
+<label class="control-label"><p>Blog Post</p></label>
 <div class="controls">
 <textarea name="blogPost" rows="5" cols="40"><?php echo !empty($blogPost)?$blogPost:'';?></textarea>
 <?php if (!empty($blogPostError)): ?>
@@ -82,7 +82,7 @@ Database::disconnect();
 <br><br><br>
 
 <div class="form-actions">
-<button type="submit" class="btn btn-success">Create</button>
+<button type="submit" class="btn btn-success"><p>Create</p></button>
 </div>
 </form>
 </div>
@@ -90,7 +90,7 @@ Database::disconnect();
 
 
 <div class="col-xs-6">	
-<h3> Recent Blog Posts </h3>
+<h3><p> Recent Blog Posts </p></h3>
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
 <div id ="content">
@@ -99,9 +99,9 @@ Database::disconnect();
 	$blog = new blogCrud($_SESSION['uid']);
 	foreach ($blog->read() as $row) { 
 	echo '<table class="table table-striped table-bordered" id="blog">';
-	echo '<tr><td>Date Posted:<br>'.$row['postDate'].'<br></td></tr>';
-	echo '<tr><td>Blog Title:<br><a href="viewpost.php?id='.$row['id'].'">'.$row['blogTitle'].'</a><br></td></tr>';
-	echo '<tr><td>Blog Post:<br>'.$row['blogPost'].'</td></tr>';
+	echo '<tr><td>Date Posted:<br><p>'.$row['postDate'].'<br></p></td></tr>';
+	echo '<tr><td><p>Blog Title:<br><a href="viewpost.php?id='.$row['id'].'">'.$row['blogTitle'].'</a></p><br></td></tr>';
+	echo '<tr><td><p>Blog Post:<br>'.$row['blogPost'].'</p></td></tr>';
   echo '<tr><td><div id="fb-root"></div>';
   echo '<div class="fb-share-button" data-href="http://ec2-52-32-48-99.us-west-2.compute.amazonaws.com/Current/viewpost.php?id='.$row['id'].'" data-layout="button" data-mobile-iframe="true"></div></td></tr>';
   echo '<tr><td><a href="https://twitter.com/intent/tweet?text=Hello%20world" class="twitter-share-button" data-show-count="false">Tweet</a></td></tr>';
