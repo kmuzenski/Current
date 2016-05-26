@@ -19,8 +19,8 @@
 <?php require_once('footer.php'); ?>
 <script>
 function nytSearch() {
-//var $_POST = <?php echo json_encode($_POST) ?>;
-//document.write($_POST["searchTerm"]);
+var $_POST = <?php echo json_encode($_POST) ?>;
+document.write($_POST["searchTerm"]);
 
  return	$.ajax({
 		method:'GET',
