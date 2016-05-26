@@ -42,6 +42,7 @@
 
 </div>
 </div>
+<br><br><br><br><br><br>
 <?php require_once('footer.php'); ?>
 
 </body>
