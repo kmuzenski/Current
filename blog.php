@@ -38,7 +38,7 @@
 <div class="container">
 <div class="row">
 <div class="col-xs-6">
-<h3><p id="title">Create a Blog Post</p></h3>
+<h3><p id="title"><strong>Create a Blog Post</strong></p></h3>
 
 <form class="form" action="blog.php" method="post">
 
@@ -90,7 +90,7 @@ Database::disconnect();
 
 
 <div class="col-xs-6">	
-<h3><p id="title"> Recent Blog Posts </p></h3>
+<h3><p id="title"> <strong>Recent Blog Posts</strong> </p></h3>
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
 <div id ="content">
