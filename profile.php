@@ -43,11 +43,10 @@ require_once('crud.php');
 </tbody>
 </table>
 </div>
-</div>
-</div>
 
 
-<div class="container">
+<div class="col-xs-6">
+
 <input type="hidden" id="current_page"/>
 <input type="hidden" id ="show_per_page"/>
 
@@ -84,7 +83,7 @@ require_once('crud.php');
 </div>
 
 </div>
-
+</div>
 
 
 <br><br><br>
