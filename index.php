@@ -11,15 +11,15 @@
 <h1>Current<img src="assets/images/wave.png" alt="logo" title="logo" width="100px"></h1>
 <br>
 <p>Search for the news stories you want to see</p>
-<br><br>
-</div>
-</div>	
+<br>
+	
 
 	<form action="newsSearch.php" method="POST">
 	<input type="text" name="searchTerm" placeholder="Search News">
 	<input type="submit" value="submit">
 	</form>
-
+</div>
+</div>
 	<br><br><br><br><br><br>
 
 <div class="container">
