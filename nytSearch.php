@@ -61,7 +61,6 @@ request();
 <script>
 function nytSearch() {
 var $_POST = <?php echo json_encode($_POST) ?>;
-=
 
  return	$.ajax({
 		method:'GET',
@@ -81,17 +80,12 @@ var $_POST = <?php echo json_encode($_POST) ?>;
 				
 		
 			});
-			
-		
+					
 }
 })	
 }
 
-
 nytSearch();
-
-
-
 </script>
 
 </body>
