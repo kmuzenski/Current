@@ -26,6 +26,16 @@ html, body {
 	background-color: #A6ABA8;
 }
 
+#nytSearch {
+	background-color: #A6ABA8;
+}
+
+#blog {
+	width: 500px;
+}
+
+
+
 
 @font-face {
 	font-family:new_media;
