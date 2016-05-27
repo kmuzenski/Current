@@ -6,7 +6,7 @@
 <body>
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
-
+<h1>News Search Results</h1>
 <div class="container">
 	<div class="row">
 
