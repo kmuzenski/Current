@@ -14,9 +14,10 @@ function request() {
 		
 			});
 				
-
+}
 })	
 }
+
 
 function nyt() {
  return	$.ajax({
