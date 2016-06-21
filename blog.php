@@ -39,7 +39,7 @@
 <div class="row">
 
 <?php 
-if(!empty($_SESSION['uid']){
+if(!empty($_SESSION['uid'])){
 
 echo '<div class="col-sm-6 col-sm-push-6">';
 echo '<h3><p id="title"><strong>Create a Blog Post</strong></p></h3>';
