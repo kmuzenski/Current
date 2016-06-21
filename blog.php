@@ -37,20 +37,26 @@
 
 <div class="container">
 <div class="row">
-<div class="col-sm-6 col-sm-push-6">
-<h3><p id="title"><strong>Create a Blog Post</strong></p></h3>
 
-<form class="form" action="blog.php" method="post">
+<?php 
+if(!empty($_SESSION['uid'])){
 
-<div class="control-group <?php echo !empty($blogTitleError)?'error':'';?>">
-<label class="control-label"><p>Blog Title</p></label>
-<div class="controls">
-<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="<?php echo !empty($blogTitle)?$blogTitle:'';?>">
-<?php if (!empty($blogTitleError)): ?>
-<span class="help-inline"><?php echo $blogTitleError;?></span>
-<?php endif; ?>
-</div>
-</div>
+echo '<div class="col-sm-6 col-sm-push-6">';
+echo '<h3><p id="title"><strong>Create a Blog Post</strong></p></h3>';
+
+echo '<form class="form" action="blog.php" method="post">';
+
+echo '<div class="control-group <?php echo !empty($blogTitleError)?'error':'';?>">';
+echo '<label class="control-label"><p>Blog Title</p></label>';
+echo '<div class="controls">';
+echo '<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="<?php echo !empty($blogTitle)?$blogTitle:'';?>">';
+echo '<?php if (!empty($blogTitleError)): ?>';
+echo '<span class="help-inline"><?php echo $blogTitleError;?></span>';
+echo '<?php endif; ?>';
+echo '</div>';
+echo '</div>';
+}
+?>
 
 <div class="control-group <?php echo !empty($blogPostError)?'error':'';?>">
 <label class="control-label"><p>Blog Post</p></label>
