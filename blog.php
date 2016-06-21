@@ -62,9 +62,9 @@ echo '<div class="control-group' . !empty($blogPostError)?'error':'' . '">';
 echo '<label class="control-label"><p>Blog Post</p></label>';
 echo '<div class="controls">';
 
-echo '<textarea name="blogPost" rows="5" cols="40">' . !empty($blogPost)?$blogPost:'' . '</textarea>';
+echo '<textarea name="blogPost" rows="5" cols="40"></textarea>';
  if (!empty($blogPostError)) {
-echo '<span class="help-inline">' .  $blogPostError . '</span>'
+echo '<span class="help-inline">' .  $blogPostError . '</span>';
 }
 echo '</div>';
 echo '</div>';
