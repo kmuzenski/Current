@@ -39,44 +39,45 @@
 <div class="row">
 
 <?php 
-if(!empty($_SESSION['uid'])){
+if(!empty($_SESSION['uid']){
 
 echo '<div class="col-sm-6 col-sm-push-6">';
 echo '<h3><p id="title"><strong>Create a Blog Post</strong></p></h3>';
 
 echo '<form class="form" action="blog.php" method="post">';
 
-echo '<div class="control-group <?php echo !empty($blogTitleError)?'error':'';?>">';
+echo '<div class="control-group ' . !empty($blogTitleError)?'error':'' . '">';
+
 echo '<label class="control-label"><p>Blog Title</p></label>';
 echo '<div class="controls">';
-echo '<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="<?php echo !empty($blogTitle)?$blogTitle:'';?>">';
-echo '<?php if (!empty($blogTitleError)): ?>';
-echo '<span class="help-inline"><?php echo $blogTitleError;?></span>';
-echo '<?php endif; ?>';
+echo '<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="' . !empty($blogTitle)?$blogTitle:'' .'">';
+ if (!empty($blogTitleError)){
+echo '<span class="help-inline">' . $blogTitleError . '</span>';
+} 
 echo '</div>';
 echo '</div>';
 }
+
+echo '<div class="control-group' . !empty($blogPostError)?'error':'' . '">';
+echo '<label class="control-label"><p>Blog Post</p></label>';
+echo '<div class="controls">';
+
+echo '<textarea name="blogPost" rows="5" cols="40">' . !empty($blogPost)?$blogPost:'' . '</textarea>';
+ if (!empty($blogPostError)) {
+echo '<span class="help-inline">' .  $blogPostError . '</span>'
+}
+echo '</div>';
+echo '</div>';
+
+echo '<br><br>';
+
+
+echo '<div class="form-actions">';
+echo '<button type="submit" class="btn btn-success"><p>Create</p></button>';
+echo '</div>';
+echo '</form>';
+echo '</div>';
 ?>
-
-<div class="control-group <?php echo !empty($blogPostError)?'error':'';?>">
-<label class="control-label"><p>Blog Post</p></label>
-<div class="controls">
-<textarea name="blogPost" rows="5" cols="40"><?php echo !empty($blogPost)?$blogPost:'';?></textarea>
-<?php if (!empty($blogPostError)): ?>
-<span class="help-inline"><?php echo $blogPostError;?></span>
-<?php endif;?>
-</div>
-</div>
-
-<br><br>
-
-
-<div class="form-actions">
-<button type="submit" class="btn btn-success"><p>Create</p></button>
-</div>
-</form>
-</div>
-
 
 
 <div class="col-sm-6 col-sm-pull-6">	
