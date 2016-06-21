@@ -42,6 +42,7 @@
 if(!empty($_SESSION['uid'])) {
 
 echo '<div class="col-sm-6 col-sm-push-6">';
+
 echo '<h3><p id="title"><strong>Create a Blog Post</strong></p></h3>';
 
 echo '<form class="form" action="blog.php" method="post">';
@@ -76,6 +77,7 @@ echo '<div class="form-actions">';
 echo '<button type="submit" class="btn btn-success"><p>Create</p></button>';
 echo '</div>';
 echo '</form>';
+echo '</div>';
 echo '</div>';
 }
 ?>
