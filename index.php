@@ -51,6 +51,7 @@ $(document).ready(function(){
 
 	function aggregate(){
 		console.log(searchResults);
+		$(document.body).append(searchResults[0].desc);
 	}
 
 
