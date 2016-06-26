@@ -16,7 +16,7 @@
 
 <input type="text" id="search" placeholder="search terms">
 <input type="submit" value="search" id="getnews">
-<div id="result1"></div>
+<div id="result"></div>
 <div id="result2"></div>
 </div>
 </div>
@@ -51,9 +51,9 @@ $(document).ready(function(){
 
 	function aggregate(){
 		console.log(searchResults);
-		$(document.body).append(searchResults[0].title);
-		$(document.body).append(searchResults[0].desc);
-		$(document.body).append(searchResults[0].url);
+		$("#result").append(searchResults[0].title);
+		$("#result").append(searchResults[0].desc);
+		$("#result").append(searchResults[0].url);
 	}
 
 
