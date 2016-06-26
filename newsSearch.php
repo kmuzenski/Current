@@ -7,85 +7,93 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 <h1>News Search Results</h1>
+<input type="text" id="search" placeholder="search terms">
+<input type="submit" value="search" id="getnews">
+<div id="result1"></div>
+<div id="result2"></div>
+
 <div class="container">
 	<div class="row">
 
-	<div id="nytSearch" class="col-xs-6">
-	
 
-	</div>
-
-	<div id="guardSearch" class="col-xs-6">
-	
-
-	</div>
 
 </div>
 </div>
 
 <?php require_once('footer.php'); ?>
 <script>
+$(document).ready(function(){
+	var searchResults = [];
 
-function request() {
-var $_POST = <?php echo json_encode($_POST) ?>;
-//document.write($_POST["searchTerm"]);	
-	return $.ajax({
-		type:'GET',
-		dataType:'jsonp',
-		cache: false,
+	function aggregate(){
+		console.log(searchResults);
+	}
 
 
-	
-		url: "http://content.guardianapis.com/search?q=" + $_POST["searchTerm"] + "&order-by=newest&api-key=af3824b3-0cbb-482c-9d7a-0df1cca0f3d0",
-		success: function(r) {
-			console.log(r);
+	$("#getnews").on("click", function(){
 
+		var nyt = false;
+		var guard = false;
 
+		var searchTerms = $("#search").val();
 
-			$.each(r.response.results, function(key, value){
-				$("#guardSearch").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.webTitle + '</strong></h4></td></tr><tr><td>' + value.sectionId + '</td></tr><tr><td><a href="' + value.webUrl + '"target="_blank">View Article</a></td></tr></table>');
-				
+		// then do something with the search terms
+		// for example, make an ajax call to get search results
+		//$("#result1").html( searchTerms );
 
-
-				
-			});
-
-
-			
 		
-}
-})	
-}
-request();
-</script>
-<script>
-function nytSearch() {
-var $_POST = <?php echo json_encode($_POST) ?>;
+		$.ajax({
+			type:'GET',
+			dataType:'jsonp',
+			cache: false,
+			url: "http://content.guardianapis.com/search?q=" + searchTerms + "&order-by=newest&api-key=af3824b3-0cbb-482c-9d7a-0df1cca0f3d0",
+			success: function(r) {
+				$.each(r.response.results, function(key, value){
+					var res = {
+						title: value.webTitle,
+						desc: value.sectionId,
+						url: value.webUrl,
+						date: "date",
+						source: "The Guardian"
+					};
+					searchResults.push(res);
+				});
+				guard = true;
+				if(guard && nyt){
+					aggregate();
+				}
+			}
+		});	
 
- return	$.ajax({
-		method:'GET',
-		dataType:'json',
-		
-		//crossDomain: true,
-		url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ $_POST["searchTerm"] +"&api-key=33b85401cda2437c829b4679e0cd3d35",
-		
+		$.ajax({
+			type:'GET',
+			dataType:'json',
+			cache: false,
+			url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ searchTerms +"&api-key=33b85401cda2437c829b4679e0cd3d35",
+			success: function(result) {
+				$.each(result.response.docs, function(key, value){
+					var res = {
+						title: value.headline.main,
+						desc: value.snippet,
+						url: value.web_url,
+						date: "date",
+						source: "New York Times"
+					};
+					searchResults.push(res);
+				});
+				nyt = true;
 
-		success: function(result) {
-		
-			
-			$.each(result.response.docs, function(key, value){
-				console.log(result);
+				//checks if both have been fuffilled then displays 
+				if(guard && nyt){
+					aggregate();
+				}
+			}
+		});	
 
-			$("#nytSearch").append('<table class="table table-striped table-bordered"><tr><td><h4><strong>' + value.headline.main + '</strong></h4></td></tr><tr><td>'  + value.snippet + '</td></tr><tr><td><a href="' + value.web_url + '"target="_blank">View Article</a></td></tr></table>');
-				
-		
-			});
-					
-}
-})	
-}
 
-nytSearch();
+	});
+});
+
 </script>
 
 </body>
