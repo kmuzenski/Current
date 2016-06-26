@@ -55,6 +55,9 @@ $(document).ready(function(){
 		$("#result").append('<p>' + searchResults[0].title + '</p><br>' );
 		$("#result").append('<p>' + searchResults[0].desc + '</p><br>');
 		$("#result").append('<p>' + searchResults[0].url + '</p><br>');
+		$("#result").append('<p>' + searchResults[19].title + '</p><br>' );
+		$("#result").append('<p>' + searchResults[19].desc + '</p><br>');
+		$("#result").append('<p>' + searchResults[19].url + '</p><br>');
 		$("#result").append('</div></div>');
 	}
 
