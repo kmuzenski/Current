@@ -7,19 +7,21 @@
 <?php require_once('nav.php'); ?>
 <br><br><br><br><br><br>
 <div class="container">
-	<div class="row">
+
+<div class="row">
 <h1>Current<img src="assets/images/wave.png" alt="logo" title="logo" width="100px"></h1>
 <br>
 <p>Search for the news stories you want to see</p>
 <br>
-	
-
 <input type="text" id="search" placeholder="search terms">
 <input type="submit" value="search" id="getnews">
-<div id="result"></div>
-<div id="result2"></div>
 </div>
+
+<div id="result">
 </div>
+
+</div>
+
 	
 	<br><br><br><br><br><br>
 
@@ -51,14 +53,14 @@ $(document).ready(function(){
 
 	function aggregate(){
 		console.log(searchResults);
-		$("#result").append('<div class="container"><div class="row">');
-		$("#result").append('<p>' + searchResults[0].title + '</p><br>' );
-		$("#result").append('<p>' + searchResults[0].desc + '</p><br>');
-		$("#result").append('<p>' + searchResults[0].url + '</p><br>');
-		$("#result").append('<p>' + searchResults[19].title + '</p><br>' );
-		$("#result").append('<p>' + searchResults[19].desc + '</p><br>');
-		$("#result").append('<p>' + searchResults[19].url + '</p><br>');
-		$("#result").append('</div></div>');
+		$("#result").append('<table class="table table-striped table-bordered">');
+		$("#result").append('<tr><td><h4>' + searchResults[0].title + '</h4></td></tr>');
+		$("#result").append('<tr><td><p>' + searchResults[0].desc + '</p></td></tr>');
+		$("#result").append('<tr><td><a href="' + searchResults[0].url + '">Read</a></td></tr>');
+		$("#result").append('<tr><td><h4>' + searchResults[19].title + '</h4></td></tr>');
+		$("#result").append('<tr><td><p>' + searchResults[19].desc + '</p></td></tr>');
+		$("#result").append('<tr><td><a href="' + searchResults[19].url + '">Read</a></td></tr>');
+		$("#result").append('</table>');
 	}
 
 
