@@ -51,9 +51,11 @@ $(document).ready(function(){
 
 	function aggregate(){
 		console.log(searchResults);
-		$("#result").append(searchResults[0].title);
-		$("#result").append(searchResults[0].desc);
-		$("#result").append(searchResults[0].url);
+		$("#result").append('<div class="container"><div class="row">');
+		$("#result").append('<p>' + searchResults[0].title + '</p><br>' );
+		$("#result").append('<p>' + searchResults[0].desc + '</p><br>');
+		$("#result").append('<p>' + searchResults[0].url + '</p><br>');
+		$("#result").append('</div></div>');
 	}
 
 
