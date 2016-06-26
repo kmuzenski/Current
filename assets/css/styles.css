@@ -14,6 +14,10 @@ html, body {
 	color: #333; 
 }
 
+#result {
+	background-color: #A6ABA8;
+}
+
 #app {
 	background-color: #A6ABA8;
 }
