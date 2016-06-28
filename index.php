@@ -12,7 +12,7 @@
 <br>
 <p id="jumboText">Search for the news stories you want to see</p>
 <br>
-<input type="text" id="search" placeholder="search terms">
+<input type="text" id="search" placeholder="search">
 <input type="submit" value="search" id="getnews">
 </div>
 </div>
