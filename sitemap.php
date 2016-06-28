@@ -38,13 +38,11 @@
 <div class="row">
 <div class="col-xs-12">
 <h1>SITE MAP</h1>
-<a href="index.php" alt="index" title="index">Index/Home</a><br>
+<a href="index.php" alt="index" title="index">Home</a><br>
 <a href="blog.php" alt="blog" title="blog">Blog</a><br>
 <a href="register.php" alt="register" title="register">Register</a><br>
-<a href="profile.php" alt="profile" title="profile">Profile</a><br>
 <a href="login.php" alt="login" title="login">Login</a><br>
 <a href="logout.php" alt="logout" title="logout">Logout</a><br>
-<a href="searchNews.php" alt="searchnews" title="searchnews">Search News</a><br>
 </div>
 </div>
 </div>
