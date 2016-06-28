@@ -40,9 +40,9 @@ $(document).ready(function(){
 		console.log(searchResults);
 		$.each(searchResults, function(key, value) {
 			$("#result").append('<table class="table table-striped table-bordered">');
-		$("#result").append('<tr><td><h4>' + searchResults.title + '</h4></td></tr>');
-		$("#result").append('<tr><td><p>' + searchResults.desc + '</p></td></tr>');
-		$("#result").append('<tr><td><a href="' + searchResults.url + '" target="_blank">Read</a></td></tr>');
+		$("#result").append('<tr><td><h4>' + searchResults[].title + '</h4></td></tr>');
+		$("#result").append('<tr><td><p>' + searchResults[].desc + '</p></td></tr>');
+		$("#result").append('<tr><td><a href="' + searchResults[].url + '" target="_blank">Read</a></td></tr>');
 		
 		$("#result").append('</table>');
 
