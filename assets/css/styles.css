@@ -4,6 +4,18 @@ html, body {
 	  		text-align: center;
 }
 
+.jumbotron {
+	background-image: url('assets/images/currentjumbo.jpg');
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+}
+
+.jumbotron .container {
+	position: relative;
+	top: 100px;
+}
+
 .navbar {
    background-color: transparent;
    background: transparent;
