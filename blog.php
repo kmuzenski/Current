@@ -51,7 +51,7 @@ echo '<form class="form" action="blog.php" method="post">';
 
 echo '<label class="control-label"><p>Blog Title</p></label>';
 
-echo '<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="' . $blogTitle: .'">';
+echo '<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="blogTitle">';
  
 
 
