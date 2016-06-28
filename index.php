@@ -27,6 +27,8 @@
 
 <div class="col-xs-4">
 <div id="result">
+<center>
+</center>
 </div>
 </div>
 
