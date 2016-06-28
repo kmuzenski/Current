@@ -35,14 +35,14 @@ $(document).ready(function(){
 	function aggregate(){
 		console.log(searchResults);
 		$.each(searchResults, function(key, value) {
-		$("#result").append('<table class="table table-striped table-bordered">');
+		$("#result").append('<center><table class="table table-striped table-bordered">');
 		$("#result").append('<tr><td><h4>' + searchResults[0].title + '</h4></td></tr>');
 		$("#result").append('<tr><td><p>' + searchResults[0].desc + '</p></td></tr>');
 		$("#result").append('<tr><td><a href="' + searchResults[0].url + '" target="_blank">Read</a></td></tr>');
 		$("#result").append('<tr><td><h4>' + searchResults[19].title + '</h4></td></tr>');
 		$("#result").append('<tr><td><p>' + searchResults[19].desc + '</p></td></tr>');
 		$("#result").append('<tr><td><a href="' + searchResults[19].url + '" target="_blank">Read</a></td></tr>');
-		$("#result").append('</table>');
+		$("#result").append('</table></center>');
 
 		});
 	
