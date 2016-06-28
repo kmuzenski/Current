@@ -70,6 +70,13 @@ h1 {
 	color: #7c7c7c;
 }	
 
+#jumboHeader {
+	font-family:new_media;
+	font-size: 80px;
+	color: #ffffff;
+
+}
+
 h2 {
 	font-family:new_media;
 	font-size: 46px;
