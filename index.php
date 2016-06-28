@@ -31,12 +31,13 @@
 
 <br><br><br><br><br><br>
 <?php require_once('footer.php'); ?>
+
 <script>
 $(document).ready(function(){
 	var searchResults = [];
 
 	function aggregate(){
-		console.log(searchResults);a
+		console.log(searchResults);
 		$("#result").append('<table class="table table-striped table-bordered">');
 		$("#result").append('<tr><td><h4>' + searchResults[0].title + '</h4></td></tr>');
 		$("#result").append('<tr><td><p>' + searchResults[0].desc + '</p></td></tr>');
