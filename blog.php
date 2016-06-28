@@ -43,20 +43,17 @@
 if(!empty($_SESSION['uid'])) {
 
 
-echo '<h3><p id="title"><strong>Create a Blog Post</strong></p></h3>';
+echo '<h3><p id="title"><strong>Create a Blog Post</strong></p></h3><br><br><br>';
 
 echo '<form class="form" action="blog.php" method="post">';
 
 
 
-echo '<label class="control-label"><p>Blog Title</p></label>';
+echo '<label class="control-label"><p>Blog Title</p></label><br>';
 
-echo '<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="blogTitle">';
+echo '<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value=""><br>';
  
-
-
-
-echo '<label class="control-label"><p>Blog Post</p></label>';
+echo '<label class="control-label"><p>Blog Post</p></label><br>';
 
 
 echo '<textarea name="blogPost" rows="5" cols="40"></textarea>';
@@ -72,7 +69,7 @@ echo '</form>';
 
 }
 ?>
-
+</div>
 
 <div class="col-sm-6">	
 <h3><p id="title"> <strong>Recent Blog Posts</strong> </p></h3>
