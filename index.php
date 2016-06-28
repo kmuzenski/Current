@@ -10,7 +10,7 @@
 <div class="jumbotron">
 <h1 id="jumboHeader">Current<img src="assets/images/wave.png" alt="logo" title="logo" width="100px"></h1>
 <br>
-<p>Search for the news stories you want to see</p>
+<p id="jumboText">Search for the news stories you want to see</p>
 <br>
 <input type="text" id="search" placeholder="search terms">
 <input type="submit" value="search" id="getnews">

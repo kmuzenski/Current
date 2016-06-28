@@ -104,6 +104,13 @@ p {
 
 }
 
+#jumboText {
+	font-family:new_media;
+	font-size: 36px;
+	color: #ffffff;
+
+}
+
 #search {
 	border: 1px solid black;
 }
