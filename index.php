@@ -41,23 +41,23 @@ $(document).ready(function(){
 		$.each(searchResults, function(key, value) {
 		$("#result").append('<table class="table table-striped table-bordered">');
 		$("#result").append('<tr><td><h4>' + searchResults[0].title + '</h4></td></tr>');
-		$("#result").append('<tr><td><p>' + value.searchResults[0].desc + '</p></td></tr>');
-		$("#result").append('<tr><td><a href="' + value.searchResults[0].url + '" target="_blank">Read</a></td></tr>');
+		$("#result").append('<tr><td><p>' + searchResults[0].desc + '</p></td></tr>');
+		$("#result").append('<tr><td><a href="' + searchResults[0].url + '" target="_blank">Read</a></td></tr>');
 		$("#result").append('<tr><td><h4>' + searchResults[10].title + '</h4></td></tr>');
-		$("#result").append('<tr><td><p>' + value.searchResults[10].desc + '</p></td></tr>');
-		$("#result").append('<tr><td><a href="' + value.searchResults[10].url + '" target="_blank">Read</a></td></tr>');
+		$("#result").append('<tr><td><p>' + searchResults[10].desc + '</p></td></tr>');
+		$("#result").append('<tr><td><a href="' + searchResults[10].url + '" target="_blank">Read</a></td></tr>');
 		$("#result").append('<tr><td><h4>' + searchResults[2].title + '</h4></td></tr>');
-		$("#result").append('<tr><td><p>' + value.searchResults[2].desc + '</p></td></tr>');
-		$("#result").append('<tr><td><a href="' + value.searchResults[2].url + '" target="_blank">Read</a></td></tr>');
+		$("#result").append('<tr><td><p>' + searchResults[2].desc + '</p></td></tr>');
+		$("#result").append('<tr><td><a href="' + searchResults[2].url + '" target="_blank">Read</a></td></tr>');
 		$("#result").append('<tr><td><h4>' + searchResults[11].title + '</h4></td></tr>');
-		$("#result").append('<tr><td><p>' + value.searchResults[11].desc + '</p></td></tr>');
-		$("#result").append('<tr><td><a href="' + value.searchResults[11].url + '" target="_blank">Read</a></td></tr>');
+		$("#result").append('<tr><td><p>' + searchResults[11].desc + '</p></td></tr>');
+		$("#result").append('<tr><td><a href="' + searchResults[11].url + '" target="_blank">Read</a></td></tr>');
 		$("#result").append('<tr><td><h4>' + searchResults[3].title + '</h4></td></tr>');
-		$("#result").append('<tr><td><p>' + value.searchResults[3].desc + '</p></td></tr>');
-		$("#result").append('<tr><td><a href="' + value.searchResults[3].url + '" target="_blank">Read</a></td></tr>');
+		$("#result").append('<tr><td><p>' + searchResults[3].desc + '</p></td></tr>');
+		$("#result").append('<tr><td><a href="' + searchResults[3].url + '" target="_blank">Read</a></td></tr>');
 		$("#result").append('<tr><td><h4>' + searchResults[12].title + '</h4></td></tr>');
-		$("#result").append('<tr><td><p>' + value.searchResults[12].desc + '</p></td></tr>');
-		$("#result").append('<tr><td><a href="' + value.searchResults[12].url + '" target="_blank">Read</a></td></tr>');
+		$("#result").append('<tr><td><p>' + searchResults[12].desc + '</p></td></tr>');
+		$("#result").append('<tr><td><a href="' + searchResults[12].url + '" target="_blank">Read</a></td></tr>');
 		$("#result").append('</table>');
 
 		});
