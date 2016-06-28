@@ -37,39 +37,30 @@
 
 <div class="container">
 <div class="row">
+<div class="col-sm-6">
 
 <?php 
 if(!empty($_SESSION['uid'])) {
 
-echo '<div class="col-sm-6">';
 
 echo '<h3><p id="title"><strong>Create a Blog Post</strong></p></h3>';
 
 echo '<form class="form" action="blog.php" method="post">';
 
-echo '<div class="control-group ' . !empty($blogTitleError)?'error':'' . '">';
+
 
 echo '<label class="control-label"><p>Blog Title</p></label>';
-echo '<div class="controls">';
-echo '<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="' . !empty($blogTitle)?$blogTitle:'' .'">';
- if (!empty($blogTitleError)){
-echo '<span class="help-inline">' . $blogTitleError . '</span>';
-} 
-echo '</div>';
-echo '</div>';
+
+echo '<input name="blogTitle" type="text" size="35" placeholder="Blog Title" value="' . $blogTitle: .'">';
+ 
 
 
-echo '<div class="control-group' . !empty($blogPostError)?'error':'' . '">';
+
 echo '<label class="control-label"><p>Blog Post</p></label>';
-echo '<div class="controls">';
+
 
 echo '<textarea name="blogPost" rows="5" cols="40"></textarea>';
- if (!empty($blogPostError)) {
-echo '<span class="help-inline">' .  $blogPostError . '</span>';
-}
-echo '</div>';
-echo '</div>';
-
+ 
 echo '<br><br>';
 
 
@@ -77,8 +68,8 @@ echo '<div class="form-actions">';
 echo '<button type="submit" class="btn btn-success"><p>Create</p></button>';
 echo '</div>';
 echo '</form>';
-echo '</div>';
-echo '</div>';
+
+
 }
 ?>
 
