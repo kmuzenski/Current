@@ -43,7 +43,9 @@ $(document).ready(function(){
 		$("#result").append('<tr><td><h4>' + searchResults[0].title + '</h4></td></tr>');
 		$("#result").append('<tr><td><p>' + searchResults[0].desc + '</p></td></tr>');
 		$("#result").append('<tr><td><a href="' + searchResults[0].url + '" target="_blank">Read</a></td></tr>');
-		
+		$("#result").append('<tr><td><h4>' + searchResults[1].title + '</h4></td></tr>');
+		$("#result").append('<tr><td><p>' + searchResults[1].desc + '</p></td></tr>');
+		$("#result").append('<tr><td><a href="' + searchResults[1].url + '" target="_blank">Read</a></td></tr>');
 		$("#result").append('</table>');
 
 		});
