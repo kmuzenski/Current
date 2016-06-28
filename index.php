@@ -16,10 +16,22 @@
 <br><br><br><br><br><br>
 
 
+<div class="container">
+<div class="row">
 
-<div id="result">
+<div class="col-xs-4">
 </div>
 
+<div class="col-xs-4">
+<div id="result">
+</div>
+</div>
+
+<div class="col-xs-4">
+</div>
+
+</div>
+</div>
 
 	
 <br><br><br><br><br><br>
