@@ -17,7 +17,10 @@
 <input type="submit" value="search" id="getnews">
 </div>
 
+<div class="row">
+<div class="col-xs-12">
 <div id="result">
+</div>
 </div>
 
 </div>
@@ -25,26 +28,7 @@
 	
 	<br><br><br><br><br><br>
 
-<div class="container">
-<div class="row">
-	<div id="app" class="col-sm-6 col-sm-push-6">
-	<form action="searchGuard.php" method="POST">
-	<input type="text" name="searchTerm" placeholder="Search The Guardian">
-	<input type="submit" value="submit">
-	</form>
 
-	</div>
-
-	
-	<div id="nyt" class="col-sm-6 col-sm-pull-6">
-	<form action="nytSearch.php" method="POST">
-	<input type="text" name="searchTerm" placeholder="Search The New York Times">
-	<input type="submit" value="submit">
-	</form>
-	</div>
-
-</div>
-</div>
 <br><br><br><br><br><br>
 <?php require_once('footer.php'); ?>
 <script>
@@ -52,7 +36,7 @@ $(document).ready(function(){
 	var searchResults = [];
 
 	function aggregate(){
-		console.log(searchResults);
+		console.log(searchResults);a
 		$("#result").append('<table class="table table-striped table-bordered">');
 		$("#result").append('<tr><td><h4>' + searchResults[0].title + '</h4></td></tr>');
 		$("#result").append('<tr><td><p>' + searchResults[0].desc + '</p></td></tr>');
@@ -129,8 +113,7 @@ $(document).ready(function(){
 });
 
 </script>
- <script src="app.js"></script> 
-
+ 
 
 </body>
 </html>
