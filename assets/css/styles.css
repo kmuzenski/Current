@@ -5,7 +5,7 @@ html, body {
 }
 
 .jumbotron {
-	background-image: 'assets/images/currentjumbo.jpg';
+	background-image: url('images/currentjumbo.jpg');
 	height: 100%;
 	width: 100%;
 	background-size: cover;
