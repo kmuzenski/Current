@@ -46,7 +46,7 @@ $(document).ready(function(){
 
 	function aggregate(){
 		console.log(searchResults);
-		$.each(searchResults, function(key, value) {
+		$.each(searchResults.[], function(key, value) {
 		$("#result").append('<center><table class="table table-striped table-bordered">');
 		$("#result").append('<tr><td><h4>' + searchResults[0].title + '</h4></td></tr>');
 		$("#result").append('<tr><td><p>' + searchResults[0].desc + '</p></td></tr>');
